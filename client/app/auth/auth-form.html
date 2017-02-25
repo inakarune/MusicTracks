@@ -1,0 +1,13 @@
+<form>
+	<label>
+		<input type="email" name="email" require="required" placeholder="Enter your email" ng-model="$ctrl.user.email">
+	</label>
+	<label>
+	<input type="password" name="password" required="required" placeholder="Enter your password" ng-model="$ctrl.user.password">
+	</label>
+	<div class="auth-button">
+		<button type="submit" ng-disabled="authForm.$invalid">
+			{{ $ctrl.message }}
+		</button>
+	</div>
+</form>

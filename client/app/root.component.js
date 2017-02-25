@@ -1,7 +1,7 @@
 import templateUrl from './root.html'
 export const rootComponent = {
   templateUrl,
-  controller: class RootComponent {
+  controller: class rootComponent {
     constructor($rootScope){
       'ngInject'
     }
