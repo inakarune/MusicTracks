@@ -1,0 +1,227 @@
+root {
+  color: chocolate;
+  background-color: black; }
+
+root .root {
+  position: relative;
+  padding-bottom: 227.38px;
+  height: 100%; }
+
+root nav .nav-wrapper {
+  position: relative; }
+
+root nav {
+  background-color: #fbc02d; }
+
+root nav .nav-wrapper form, nav .nav-wrapper form .input-field {
+  height: 100%;
+  width: 250px;
+  border-radius: 30px; }
+
+root .brand-logo {
+  text-decoration: none;
+  display: block; }
+
+root .modal {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px 0px transparent; }
+
+root bottom {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0; }
+
+root .contents {
+  margin: 30px;
+  padding: 30px; }
+search .input-field {
+  position: absolute;
+  left: 50px;
+  display: block; }
+
+search input[type=search] {
+  border-radius: 10px; }
+upload .alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+  transition: opacity 0.6s;
+  margin-bottom: 15px; }
+
+upload .alert.success {
+  background-color: #4CAF50; }
+
+upload .alert.info {
+  background-color: #2196F3; }
+
+upload .alert.warning {
+  background-color: #ff9800; }
+
+upload .closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s; }
+
+upload .closebtn:hover {
+  color: black; }
+
+upload .divider {
+  border-left: 1px solid #bbb;
+  height: 100%;
+  background-color: white;
+  padding-left: 30px; }
+cart md-whiteframe {
+  height: 80px;
+  padding-left: 22px;
+  padding-top: 10px;
+  padding-right: 22px;
+  width: 100%;
+  margin-bottom: 18px;
+  justify-content: flex-start; }
+discover discoverwrap {
+  clear: both; }
+
+discover .container {
+  position: relative;
+  width: 250px; }
+
+discover .image {
+  opacity: 1;
+  display: block;
+  width: 250px;
+  transition: .5s ease;
+  backface-visibility: hidden; }
+
+discover .middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); }
+
+discover .container:hover .image {
+  opacity: 0.3; }
+
+discover .container:hover .middle {
+  opacity: 1; }
+
+discover .text {
+  color: white;
+  font-size: 80px;
+  background-color: rgba(255, 255, 255, 0); }
+
+discover div.polaroid {
+  width: 250px;
+  background-color: white;
+  margin-bottom: 25px;
+  float: left; }
+
+discover div.content {
+  text-align: center;
+  padding: 10px 20px; }
+
+discover a.lightbox img {
+  height: 150px;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  margin: 94px 20px 20px 20px; }
+
+discover .lightbox-target {
+  position: fixed;
+  top: -100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+  overflow: hidden; }
+
+discover .lightbox-target img {
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 0%;
+  max-width: 0%;
+  border: 3px solid white;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
+discover a.lightbox-close {
+  display: block;
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background: white;
+  color: black;
+  text-decoration: none;
+  position: absolute;
+  top: -80px;
+  right: 0;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out; }
+
+discover a.lightbox-close:before {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg); }
+
+discover a.lightbox-close:after {
+  content: "";
+  display: block;
+  height: 30px;
+  width: 1px;
+  background: black;
+  position: absolute;
+  left: 26px;
+  top: 10px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg); }
+
+discover .lightbox-target:target {
+  opacity: 1;
+  top: 0;
+  bottom: 0; }
+
+discover .lightbox-target:target img {
+  max-height: 100%;
+  max-width: 100%; }
+
+discover .lightbox-target:target a.lightbox-close {
+  top: 0px; }
+
+discover .rb {
+  position: fixed;
+  right: -60px;
+  bottom: -60px; }
