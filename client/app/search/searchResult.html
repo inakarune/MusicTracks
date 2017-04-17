@@ -1,10 +1,10 @@
 <h3>Search Results {{ keyword }}</h3>
 
-<md-toolbar class="md-theme-light">
-  <h5 class="md-toolbar-tools">
-    <span>{{ searchs.length }} tracks matching "{{ keyword }}"</span>
+
+  <h5>
+    {{ searchs.length }} tracks matching "{{ keyword }}"
   </h5>
-</md-toolbar>
+
 
 <ul class="collection">
   <li class="collection-item avatar" ng-repeat="song in searchs">
@@ -23,28 +23,3 @@
     <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
   </li>
 </ul>
-
-
-
-<!-- 
-<md-content>
-  <md-list>
-    <md-list-item class="md-3-line" ng-repeat="song in searchs">
-      <img ng-src="{{song.picture}}" ng-style="imgObj"/>
-      <div class="md-list-item-text">
-        <h3>{{song.title}}</h3>
-        <h4>{{song.artist}}</h4>
-        <p>album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}</p>
-      </div>
-      
-      <audio id="{{$index}}" src="{{song.filename}}"></audio>
-      <a href="#" class="btn btn-info btn-lg" ng-click="playNg($index)">
-        <span class="glyphicon glyphicon-play-circle"></span> Play
-      </a>
-      <a href="#" class="btn btn-info btn-lg" ng-click="sendCart(song.title, song.artist, song.album, song.price)">
-        <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
-      </a>
-    </md-list-item>
-  </md-list>
-</md-content>
-<md-divider ng-if="!$last"></md-divider> -->
