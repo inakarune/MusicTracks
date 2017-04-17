@@ -1,25 +1,14 @@
 const express = require('express');
 const methodOverride = require('method-override');
-
-// const multer = require('multer');
-// const upload = multer({ dest: './uploads/' })
-
-
 const session = require('express-session');
-
-
-
-// const Buffer = require('buffer').Buffer;
-// const Iconv = require('iconv').Iconv;
-
-// const iamporter = new Iamporter({
-// 	apiKey: config.apiKey,
-// 	secret: config.secret
-// });
-
 const app = express();
 const port = 8080;
 
+app.use(session({
+	secret : '123552dehisdfkcn',
+	resave : false,
+	saveUninitialized : true
+}));
 // mongoose.connect('mongodb://localhost/Musictracks');
 app.use('/', express.static(__dirname + '/dist'));
 // app.set('views', path.join(__dirname, 'dist'));
@@ -48,11 +37,7 @@ require('./config/routes')(app);
 
 
 
-app.use(session({
-	secret : '123552dehisdfkcn',
-	resave : false,
-	saveUninitialized : true
-}));
+
 
 
 
