@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack:deploy": "--config=webpack/webpack.config.js -p",
-  "heroku-postbuild": "npm run webpack:deploy",
+    "build": "webpack",
+    "postinstall": "NODE_ENV=production webpack -p",
     "start": "node server.js",
     "start:webpack": "webpack-dev-server"
   },
@@ -48,6 +48,7 @@
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
+    "webpack": "^2.2.1",
     "@angular/router": "^0.2.0",
     "angular": "^1.5.9",
     "angular-router": "0.0.2",
