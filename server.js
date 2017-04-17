@@ -25,7 +25,9 @@ app.use('/', express.static(__dirname + '/dist'));
 // app.set('views', path.join(__dirname, 'dist'));
 // app.set('view engine', 'html')
 
-require('./database').connect('mongodb://heroku_3z9d4ltz:heroku_3z9d4ltz@ds163020.mlab.com:63020/heroku_3z9d4ltz');
+require('./database').connect('
+mongodb://heroku_3z9d4ltz:heroku_3z9d4ltz@ds163020.mlab.com:63020/heroku_3z9d4ltz
+');
 
 require('./middlewares')(app);
 
