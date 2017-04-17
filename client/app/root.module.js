@@ -11,6 +11,7 @@ import { discoverModule } from './discover/discover.module';
 import { bottomModule } from './footer/bottom.module';
 import { navbarModule } from './nav/navbar.module';
 import uiRouter from 'angular-ui-router';
+import icons from 'material-design-icons';
 
 export const root = angular
   .module('root', [ 
@@ -23,7 +24,8 @@ export const root = angular
                      cartModule,
                      discoverModule,
                      bottomModule,
-                     navbarModule
+                     navbarModule,
+                     icons
   ])
   .component('root', rootComponent)
   .config(($stateProvider, $urlRouterProvider) => {
