@@ -1,6 +1,8 @@
 const path = require('path')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const loaderUtils = require('loader-utils');
+const options = loaderUtils.getOptions(this);
 
 const PATHS = {
   client: path.resolve(__dirname, 'client'),
@@ -43,7 +45,8 @@ module.exports = env => {
         {
           test: /\.js$/,
           exclude: `/node_modules/`,
-          use: [`ng-annotate-loader`, `babel-loader`]
+          loader: 'babel-loader',
+          options: { compact: false }
         },
       ]
     },

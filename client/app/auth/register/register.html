@@ -1,0 +1,16 @@
+<h1>REGISTER</h1>
+
+<form name="registerForm" novalidate ng-submit="$ctrl.submitInfo()">
+		<label>E-mail</label>
+			<input type="email" name="email" required="required" placeholder="Enter your email" ng-model="$ctrl.user.email">
+
+		<label>Password</label>
+			<input type="password" name="password" required="required" placeholder="Enter your password" ng-model="$ctrl.user.password">
+		<div class="auth-button">
+			<button type="submit" ng-disabled="authForm.$invalid">
+				회원가입
+			</button>
+	</div>
+</form>
+
+<a ui-sref="login">이미 회원이시면 로그인해주세요.</a>

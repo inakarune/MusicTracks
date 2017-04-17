@@ -48,14 +48,24 @@
   },
   "dependencies": {
     "@angular/router": "^0.2.0",
-    "angular": "^1.5.11",
+    "angular": "^1.5.9",
     "angular-router": "0.0.2",
     "angular-ui-router": "^1.0.0-beta.3",
-    "body-parser": "^1.16.1",
+    "aws-sdk": "^2.40.0",
+    "body-parser": "^1.17.0",
+    "cookie-parser": "^1.4.3",
+    "cors": "^2.8.3",
     "express": "^4.13.4",
+    "express-session": "^1.15.1",
+    "formidable": "^1.1.1",
+    "fs": "0.0.1-security",
+    "iamporter": "^1.2.19",
+    "jsonwebtoken": "^7.3.0",
+    "loader-utils": "^1.0.2",
+    "mdi": "^1.8.36",
     "method-override": "^2.3.7",
     "mongoose": "^4.4",
-    "passport": "^0.3.2",
-    "q": "^1.4.1"
+    "musicmetadata": "^2.0.5",
+    "ng-annotate": "^1.2.1"
   }
 }

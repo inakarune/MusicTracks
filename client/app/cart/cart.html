@@ -1,0 +1,43 @@
+
+<h3>CART</h3>
+
+<div ng-if="!$ctrl.cartObj.data.length">장바구니가 비어있습니다</div>
+<div>
+  <table class="highlight">
+    <thead>
+      <tr>
+        <th>check</th>
+        <th>title</th>
+        <th>artist</th>
+        <th>album</th>
+        <th>price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="item in $ctrl.cartObj.data">
+        <td>
+          <input type="checkbox" id="test5{{$index}}" ng-value="{{$index}}" ng-click="$ctrl.cb_change($event, item.title)"/>
+          <label for="test5{{$index}}"> </label>
+        </td>
+        <td>{{item.title}}</td>
+        <td>{{item.artist}}</td>
+        <td>{{item.album}}</td>
+        <td>{{item.price}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="right">
+  <h5>order total : {{$ctrl.checkbox.length * 1000}} won</h5>
+  <p>
+    <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="$ctrl.cb_delete()">DELETE
+      <i class="material-icons right"></i>
+    </button>
+    <button class="btn waves-effect waves-light" type="submit" name="action" ng-click="$ctrl.kakaopay($ctrl.checkbox)">BUY
+      <i class="material-icons right"></i>
+    </button>
+  </p>
+</div>
+
+

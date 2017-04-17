@@ -1,0 +1,51 @@
+<div class="progress" ng-if="$ctrl.progress">
+  <div class="indeterminate"></div>
+</div>
+<div class="alert success" ng-if="$ctrl.alert">
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
+  <strong>Success!</strong> Indicates a successful or positive action.
+</div>
+<h3>음반 업로드</h3>
+
+
+<div>
+  <div class="left">
+    <form method="post" enctype="multipart/form-data" ng-submit="$ctrl.onSubmit($event)">
+      <div class="file-field input-field">
+      <div class="btn">
+        <span>File</span>
+        <input type="file" id="fff" name="userfile" multiple required />
+      </div>
+      <div class="file-path-wrapper">
+        <input class="file-path validate" type="text" placeholder="Upload one or more files">
+      </div>
+      </div>
+      <button class="btn waves-effect waves-light" type="submit" name="action">Upload
+        <i class="material-icons right">send</i>
+      </button>
+    </form>
+  </div>
+  <div class="right divider">
+      <h3 class="center-align">uploaded list</h3>
+    <div>
+      <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Title</th>
+              <th>Artist</th>
+              <th>Album</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="song in $ctrl.fileData">
+              <td><img ng-src="{{song.picture}}" class="circle responsive-img" ng-style="$ctrl.imgObj"/></td>
+              <td>{{song.title}}</td>
+              <td>{{song.artist}}</td>
+              <td>{{song.album}}</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+  </div>
+</div>

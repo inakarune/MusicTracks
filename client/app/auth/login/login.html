@@ -1,0 +1,59 @@
+
+<h1>LOGIN</h1>
+<form name="authForm" novalidate ng-submit="$ctrl.submitForm()">
+  <div class="row">
+    <div class="input-field col s6">
+      <label>Email</label>
+      <input type="email" name="email" required ng-model="$ctrl.user.email">
+    </div>
+  </div>
+  <div class="row">
+    <div class="input-field col s6">
+      <label>password</label>
+      <input required name="password" ng-model="$ctrl.user.password" type="password">  
+    </div>
+  </div>
+  <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+  <i class="material-icons right">send</i>
+  </button>
+</form>
+
+<a ui-sref="register">회원이 아니세요? 회원가입하세요!</a>
+
+<form method="get" action="/auth/google">
+  <button type="submit" class="btn waves-effect waves-light"><i class="material-icons right">perm_identity</i> GOOGLE AUTH</button>
+</form>
+  
+
+
+
+
+
+<!-- <h1>Login</h1>
+<form name="authForm" novalidate ng-submit="$ctrl.submitForm()">
+    <p>
+        E-mail
+            <input type="email" name="email" required="required" placeholder="Enter your email" ng-model="$ctrl.user.email">
+        
+    <p>
+    <p>
+        Password
+            <input type="password" name="password" required="required" placeholder="Enter your password" ng-model="$ctrl.user.password">
+    </p>
+    <div class="auth-button">
+        <button type="submit" ng-disabled="authForm.$invalid">
+           로그인
+        </button>
+    </div>
+</form>
+    <p>
+<form method="get" action="/auth/google">
+    <input type="submit" value="google auth">
+</form>
+    </p>
+    <a ui-sref="register">
+    회원이 아니세요? 회원가입하세요!
+    </a>
+
+
+ -->
