@@ -48,7 +48,7 @@
     "webpack-dev-server": "^2.4.1"
   },
   "dependencies": {
-    "webpack": "^2.2.1",
+    "copy-webpack-plugin": "^4.0.1",
     "@angular/router": "^0.2.0",
     "angular": "^1.5.9",
     "angular-router": "0.0.2",
