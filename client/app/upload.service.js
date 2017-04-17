@@ -29,7 +29,7 @@ export class uploadService {
   getUploadedSongList(){
     this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
     return this.$http
-            .get('/getUploadedSongList')
+            .get('/getUploadedSongList/')
             .success(res => {
               return res;
             })
