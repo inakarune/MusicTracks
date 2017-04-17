@@ -19,8 +19,8 @@ module.exports = function(app){
 
   app.post('/upload', verifyToken, fileController.uploadFile);
   app.get('/download', verifyToken, fileController.downloadFile);
-  app.get('/search/:keyword/:condition', verifyToken, fileController.searchFile);
-  app.get('/discover', verifyToken, fileController.discoverFile);
-  app.get('/chart', verifyToken, fileController.chartFile);
+  app.get('/search/:keyword/:condition', fileController.searchFile);
+  app.get('/discover', fileController.discoverFile);
+  app.get('/chart', fileController.chartFile);
   app.get('/getUploadedSongList', verifyToken, fileController.getUploadedFileList);
 };

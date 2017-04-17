@@ -6,8 +6,8 @@
   </h5>
 </md-toolbar>
 
-<ul class="collection" ng-repeat="song in searchs">
-  <li class="collection-item avatar">
+<ul class="collection">
+  <li class="collection-item avatar" ng-repeat="song in searchs">
     <img ng-src="{{song.picture}}" ng-style="imgObj">
     <span class="title">{{song.title}}</span>
     <p>{{song.artist}} <br>
