@@ -267,6 +267,6 @@ require('./config/routes')(app);
 // });
 
 
-app.listen(port, () => console.log('Express listening on port', port))
+app.listen(process.env.PORT || port, () => console.log('Express listening on port', port))
 
 module.exports = app;
