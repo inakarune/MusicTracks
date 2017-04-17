@@ -22,5 +22,5 @@ module.exports = function(app){
   app.get('/search/:keyword/:condition', verifyToken, fileController.searchFile);
   app.get('/discover', verifyToken, fileController.discoverFile);
   app.get('/chart', verifyToken, fileController.chartFile);
-  app.get('/getUploadedSongList/', verifyToken, fileController.getUploadedFileList);
+  app.get('/getUploadedSongList', verifyToken, fileController.getUploadedFileList);
 };
