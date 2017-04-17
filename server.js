@@ -2,7 +2,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const app = express();
-const port = 8080;
+const port = 5000;
 
 app.use(session({
 	secret : '123552dehisdfkcn',
