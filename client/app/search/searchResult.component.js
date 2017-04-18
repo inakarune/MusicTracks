@@ -81,5 +81,3 @@ function resultCtrl($scope, $stateParams, searchService, $http){
     });
   }
 }
-
-resultCtrl.$inject = ['$http', 'searchService', '$stateParams', '$scope'];
