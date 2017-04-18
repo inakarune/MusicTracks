@@ -2,7 +2,8 @@
   "name": "MusicTracks",
   "version": "0.0.1",
   "engines": {
-    "node": "6.10.2"
+    "node": "6.10.2",
+    "npm": "3.10.10"
   },
   "description": "music player platform",
   "main": "index.js",
