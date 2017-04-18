@@ -43,7 +43,6 @@ function resultCtrl($scope, $state, $stateParams, searchService, $http){
       method: 'GET',
       url: '/cart/:item',
       params: {'title' : title, 'artist': artist, 'album': album, 'price': price }
-      // responseType: 'blob'
-    })
+    });
   }
 }
