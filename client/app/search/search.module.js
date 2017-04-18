@@ -8,6 +8,7 @@ import uiRouter from 'angular-ui-router';
 export const searchModule = angular
   .module('search', [ searchResultModule, uiRouter ])
   .component('search', searchComponent)
+  .value('EventEmitter', keyword => ({ $event : keyword }))
   .service('searchService', searchService)
   .config(($stateProvider, $urlRouterProvider) => {
     'ngInject'
