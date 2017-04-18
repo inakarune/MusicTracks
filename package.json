@@ -4,7 +4,6 @@
   "description": "music player platform",
   "main": "index.js",
   "scripts": {
-    "postinstall": "webpack -p --config webpack.config.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",

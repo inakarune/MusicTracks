@@ -9,7 +9,6 @@ export const searchResultModule = angular
   .config(($stateProvider, $urlRouterProvider) => {
   	'ngInject';
   	$stateProvider
-
       .state('searchResults', {
         url: '/search-results/:keyword/:condition',
         component: 'searchResult'
