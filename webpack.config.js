@@ -45,8 +45,10 @@ module.exports = env => {
         {
           test: /\.js$/,
           exclude: `/node_modules/`,
-          loader: 'babel-loader',
-          options: { compact: false }
+          loader: 'babel',
+          query: {
+            presets: ['es2015']
+          }
         },
       ]
     },
