@@ -39,7 +39,7 @@ export const searchResultComponent = {
   controller: ['$http', 'searchService', '$stateParams', resultCtrl]
 };
 
-function resultCtrl($scope, $state, $stateParams, searchService, $http){ 
+function resultCtrl($scope, $stateParams, searchService, $http){ 
   $scope.keyword = $stateParams.keyword;
   console.log('stateParams', $stateParams)
   
