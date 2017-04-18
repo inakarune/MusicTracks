@@ -1,7 +1,7 @@
 import angular from 'angular';
 import './search.scss';
 import { searchComponent } from './search.component';
-import { searchService } from './search.Service';
+import { searchService } from './search.service';
 import { searchResultModule } from './searchResult.module';
 import uiRouter from 'angular-ui-router';
 

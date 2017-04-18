@@ -1,6 +1,6 @@
 import angular from 'angular';
 import { searchResultComponent } from './searchResult.component';
-import { searchService } from './search.Service';
+import { searchService } from './search.service';
 import uiRouter from 'angular-ui-router';
 
 export const searchResultModule = angular
