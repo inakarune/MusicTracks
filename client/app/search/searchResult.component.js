@@ -63,7 +63,8 @@ function resultCtrl($scope, $stateParams, searchService, $http){
   $scope.imgObj = {
     "width" : "150px",
     "margin-top" : '20px',
-    "margin-right" : '20px'
+    "margin-right" : '20px',
+    "margin-left": '20px'
   }
 
   $scope.playNg = function(index){
