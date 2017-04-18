@@ -36,7 +36,7 @@ import templateUrl from './searchResult.html';
 // }
 export const searchResultComponent = {
   templateUrl,
-  controller: ['$http', 'searchService', '$stateParams', '$scope', resultCtrl]
+  controller: resultCtrl
 };
 
 function resultCtrl($scope, $stateParams, searchService, $http){ 
@@ -81,3 +81,5 @@ function resultCtrl($scope, $stateParams, searchService, $http){
     });
   }
 }
+
+resultCtrl.$inject = ['$http', 'searchService', '$stateParams', '$scope'];

@@ -9205,107 +9205,96 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.searchResultComponent = undefined;
 
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 var _searchResult = __webpack_require__(116);
 
 var _searchResult2 = _interopRequireDefault(_searchResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var searchResultComponent = exports.searchResultComponent = {
-  templateUrl: _searchResult2.default,
-  controller: function () {
-    function searchResultComponent($http, searchService, $stateParams, $state) {
-      var _this = this;
-
-      _classCallCheck(this, searchResultComponent);
-
-      this.$http = $http;
-      this.searchService = searchService;
-      this.$stateParams = $stateParams;
-      this.keyword = this.$stateParams.keyword;
-      this.imgObj = {
-        "width": "150px",
-        "margin-top": "20px",
-        "margin-right": "20px"
-      };
-      this.searchService.searchSong(this.keyword, 'title').then(function (response) {
-        return _this.searchs = response;
-      });
-    }
-
-    _createClass(searchResultComponent, [{
-      key: "playNg",
-      value: function playNg(index) {
-        var idx = index.toString();
-        var audio = document.getElementById(idx);
-        audio.load();
-        audio.play();
-      }
-    }, {
-      key: "sendCart",
-      value: function sendCart(title, artist, album, price) {
-        return this.$http({
-          method: 'GET',
-          url: '/cart/:item',
-          params: { 'title': title, 'artist': artist, 'album': album, 'price': price }
-        });
-      }
-    }]);
-
-    return searchResultComponent;
-  }()
-};
 // export const searchResultComponent = {
 //   templateUrl,
-//   controller: resultCtrl
-// };
-
-// function resultCtrl($scope, $state, $stateParams, searchService, $http){
-//   $scope.keyword = $stateParams.keyword;
-//   console.log('stateParams', $stateParams)
-
-//   searchService.searchSong($scope.keyword, 'title')
-//     .then(response => {$scope.searchs = response
-//       console.log('resultCtrl', $scope.searchs)
-//     });
-
-//   $scope.arrayBufferToBase64 = function(buffer) {
-//     var binary = '';
-//     var bytes = new Uint8Array(buffer);
-//     var length = bytes.byteLength;
-//     for (var i = 0; i < length; i++) {
-//         binary += String.fromCharCode(bytes[i]);
+//   controller: class searchResultComponent {
+//     constructor($http, searchService, $stateParams, $state){
+//       this.$http = $http;
+//       this.searchService = searchService;
+//       this.$stateParams = $stateParams;
+//       this.keyword = this.$stateParams.keyword;
+//       this.imgObj = {
+//         "width": "150px",
+//         "margin-top": "20px",
+//         "margin-right": "20px"
+//       };
+//       this.searchService.searchSong(this.keyword, 'title')
+//         .then(response => this.searchs = response)
 //     }
-//     var result = window.btoa(binary);
 
-//     return result;
-//   }
-
-//   $scope.imgObj = {
-//     "width" : "150px",
-//     "margin-top" : '20px',
-//     "margin-right" : '20px'
-//   }
-
-//   $scope.playNg = function(index){
+//     playNg(index){
 //       var idx = index.toString();
 //       var audio = document.getElementById(idx);
 //       audio.load();
 //       audio.play();
 //     }
 
-//   $scope.sendCart = function(title, artist, album, price){
-//     return $http({
-//       method: 'GET',
-//       url: '/cart/:item',
-//       params: {'title' : title, 'artist': artist, 'album': album, 'price': price }
-//     });
+//     sendCart(title, artist, album, price){
+//       return this.$http({
+//         method: 'GET',
+//         url: '/cart/:item',
+//         params: { 'title': title, 'artist': artist, 'album': album, 'price': price }
+//       });
+//     }
+
+
 //   }
 // }
+var searchResultComponent = exports.searchResultComponent = {
+  templateUrl: _searchResult2.default,
+  controller: resultCtrl
+};
+
+function resultCtrl($scope, $stateParams, searchService, $http) {
+  $scope.keyword = $stateParams.keyword;
+  console.log('stateParams', $stateParams);
+
+  searchService.searchSong($scope.keyword, 'title').then(function (response) {
+    $scope.searchs = response;
+    console.log('resultCtrl', $scope.searchs);
+  });
+
+  $scope.arrayBufferToBase64 = function (buffer) {
+    var binary = '';
+    var bytes = new Uint8Array(buffer);
+    var length = bytes.byteLength;
+    for (var i = 0; i < length; i++) {
+      binary += String.fromCharCode(bytes[i]);
+    }
+    var result = window.btoa(binary);
+
+    return result;
+  };
+
+  $scope.imgObj = {
+    "width": "150px",
+    "margin-top": '20px',
+    "margin-right": '20px'
+  };
+
+  $scope.playNg = function (index) {
+    var idx = index.toString();
+    var audio = document.getElementById(idx);
+    audio.load();
+    audio.play();
+  };
+
+  $scope.sendCart = function (title, artist, album, price) {
+    return $http({
+      method: 'GET',
+      url: '/cart/:item',
+      params: { 'title': title, 'artist': artist, 'album': album, 'price': price }
+    });
+  };
+}
+
+resultCtrl.$inject = ['$http', 'searchService', '$stateParams', '$scope'];
 
 /***/ }),
 /* 74 */
@@ -28956,7 +28945,7 @@ module.exports = path;
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/search/searchResult.html';
-var html = "<h3>Search Results {{ keyword }}</h3>\n\n\n  <h5>\n    {{ searchs.length }} tracks matching \"{{ keyword }}\"\n  </h5>\n\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in $ctrl.searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"$ctrl.imgObj\">\n    <span class=\"title\">{{song.title}}</span>\n    <p>{{song.artist}} <br>\n       album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </p>\n    <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"$ctrl.playNg($index)\">\n      <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"$ctrl.sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>\n    <a href=\"#!\" class=\"secondary-content\"><i class=\"material-icons\">grade</i></a>\n  </li>\n</ul>\n";
+var html = "<h3>Search Results {{ keyword }}</h3>\n\n\n  <h5>\n    {{ searchs.length }} tracks matching \"{{ keyword }}\"\n  </h5>\n\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"imgObj\">\n    <span class=\"title\">{{song.title}}</span>\n    <p>{{song.artist}} <br>\n       album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </p>\n    <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"playNg($index)\">\n      <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>\n    <a href=\"#!\" class=\"secondary-content\"><i class=\"material-icons\">grade</i></a>\n  </li>\n</ul>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
