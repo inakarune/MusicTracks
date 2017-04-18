@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "heroku-postbuild": "webpack -p --config ./webpack.prod.config.js --progress",
+    "heroku-postbuild": "webpack -p --config ./webpack.config.js --progress",
     "start": "node server.js",
     "start:webpack": "webpack-dev-server"
   },
@@ -69,4 +69,4 @@
     "musicmetadata": "^2.0.5",
     "ng-annotate": "^1.2.1"
   }
-}
+}//"postinstall": "webpack -p --config webpack.config.js --progress",
