@@ -36,7 +36,7 @@ import templateUrl from './searchResult.html';
 // }
 export const searchResultComponent = {
   templateUrl,
-  controller: ['$http', 'searchService', '$stateParams', resultCtrl]
+  controller: ['$http', 'searchService', '$stateParams', '$scope', resultCtrl]
 };
 
 function resultCtrl($scope, $stateParams, searchService, $http){ 
