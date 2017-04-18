@@ -6,6 +6,7 @@ import uiRouter from 'angular-ui-router';
 export const searchResultModule = angular
   .module('searchResult', [ uiRouter ])
   .component('searchResult', searchResultComponent)
+  .service('searchService', searchService)
   .config(($stateProvider, $urlRouterProvider) => {
   	'ngInject';
   	$stateProvider

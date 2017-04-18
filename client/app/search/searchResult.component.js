@@ -1,4 +1,4 @@
-import templateUrl from './searchResult.html'
+import templateUrl from './searchResult.html';
 export const searchResultComponent = {
   templateUrl,
   controller: resultCtrl
