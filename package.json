@@ -69,4 +69,4 @@
     "musicmetadata": "^2.0.5",
     "ng-annotate": "^1.2.1"
   }
-}//"postinstall": "webpack -p --config webpack.config.js --progress",
+}
