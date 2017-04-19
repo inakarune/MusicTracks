@@ -1,4 +1,4 @@
-<nav>
+<nav class="grey darken-4">
   <div class="nav-wrapper">
     <div class="row">
       <a href="/" class="brand-logo center">MUSICTRACKS</a>
@@ -12,14 +12,15 @@
         <li><a ui-sref="chart">CHART</a></li>
       </ul>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li ng-if="!onLogin"><div class="g-signin2" data-onsuccess="onSignIn"></div></li>
+        <li ng-if="!onLogin">
+          <div class="g-signin2 btn btn-info btn-lg" data-onsuccess="onSignIn">
+          </div>
+        </li>
         <li ng-if="onLogin">  
           <img ng-src="{{userImg}}" ng-style="profileStyle"/>
           <span ng-style="nameStyle">{{userName}}</span>
         </li>
-        <!-- <li><a id ="signout" href="#" onclick="signOut()">LOGOUT</a></li> -->
         </ul>
-       <!--  <li ng-if="onLogin"> -->
         <div class="right">
           <a class="dropdown-button" href="#" data-activates="dropdown1" ng-if="onLogin">
             Dropdown
@@ -32,8 +33,7 @@
   </div>
 </nav>
 
-<ul id="dropdown1" class="dropdown-content">
-  <li><a href="#">MY PROFILE</a></li>
+<ul id="dropdown1" class="dropdown-content" ng-if="onLogin">
   <li><a ui-sref="upload">UPLOAD</a></li>
   <li><a ui-sref="cart">CART</a></li>
   <li class="divider"></li>

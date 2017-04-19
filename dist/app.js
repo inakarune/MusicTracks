@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 118);
+/******/ 	return __webpack_require__(__webpack_require__.s = 121);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1070,7 +1070,7 @@ exports.pattern = pattern;
 "use strict";
 
 
-__webpack_require__(86);
+__webpack_require__(87);
 module.exports = angular;
 
 /***/ }),
@@ -1108,17 +1108,17 @@ function __export(m) {
     if (!exports.hasOwnProperty(p)) exports[p] = m[p];
   }
 }
-__export(__webpack_require__(87));
-__export(__webpack_require__(94));
+__export(__webpack_require__(88));
 __export(__webpack_require__(95));
 __export(__webpack_require__(96));
 __export(__webpack_require__(97));
 __export(__webpack_require__(98));
 __export(__webpack_require__(99));
 __export(__webpack_require__(100));
+__export(__webpack_require__(101));
 __export(__webpack_require__(31));
 __export(__webpack_require__(36));
-__export(__webpack_require__(93));
+__export(__webpack_require__(94));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -1143,11 +1143,11 @@ __export(__webpack_require__(5));
 __export(__webpack_require__(21));
 __export(__webpack_require__(22));
 __export(__webpack_require__(30));
-__webpack_require__(79);
-__webpack_require__(77);
-__webpack_require__(81);
+__webpack_require__(80);
 __webpack_require__(78);
-__webpack_require__(85);
+__webpack_require__(82);
+__webpack_require__(79);
+__webpack_require__(86);
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = "ui.router";
 //# sourceMappingURL=index.js.map
@@ -3380,11 +3380,11 @@ exports.UrlMatcher = UrlMatcher;
 var angular_1 = __webpack_require__(9);
 var ui_router_core_1 = __webpack_require__(5);
 var views_1 = __webpack_require__(22);
-var templateFactory_1 = __webpack_require__(83);
+var templateFactory_1 = __webpack_require__(84);
 var stateProvider_1 = __webpack_require__(30);
-var onEnterExitRetain_1 = __webpack_require__(82);
-var locationServices_1 = __webpack_require__(80);
-var urlRouterProvider_1 = __webpack_require__(84);
+var onEnterExitRetain_1 = __webpack_require__(83);
+var locationServices_1 = __webpack_require__(81);
+var urlRouterProvider_1 = __webpack_require__(85);
 angular_1.ng.module("ui.router.angular1", []);
 var mod_init = angular_1.ng.module('ui.router.init', []);
 var mod_util = angular_1.ng.module('ui.router.util', ['ng', 'ui.router.init']);
@@ -4745,11 +4745,11 @@ exports.Transition = Transition;
 var interface_1 = __webpack_require__(13);
 var transition_1 = __webpack_require__(27);
 var hookRegistry_1 = __webpack_require__(26);
-var resolve_1 = __webpack_require__(90);
-var views_1 = __webpack_require__(92);
-var url_1 = __webpack_require__(91);
-var redirectTo_1 = __webpack_require__(89);
-var onEnterExitRetain_1 = __webpack_require__(88);
+var resolve_1 = __webpack_require__(91);
+var views_1 = __webpack_require__(93);
+var url_1 = __webpack_require__(92);
+var redirectTo_1 = __webpack_require__(90);
+var onEnterExitRetain_1 = __webpack_require__(89);
 var lazyLoad_1 = __webpack_require__(32);
 var transitionEventType_1 = __webpack_require__(43);
 var transitionHook_1 = __webpack_require__(15);
@@ -8180,7 +8180,7 @@ var _angularUiRouter = __webpack_require__(6);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-__webpack_require__(101);
+__webpack_require__(102);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8226,16 +8226,25 @@ var _angular2 = _interopRequireDefault(_angular);
 
 var _chart = __webpack_require__(66);
 
+var _chart2 = __webpack_require__(67);
+
+__webpack_require__(103);
+
 var _angularUiRouter = __webpack_require__(6);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var chartModule = exports.chartModule = _angular2.default.module('chart', [_angularUiRouter2.default]).component('chart', _chart.chartComponent).config(function ($stateProvider, $urlRouterProvider) {
+var chartModule = exports.chartModule = _angular2.default.module('chart', [_angularUiRouter2.default]).component('chart', _chart.chartComponent).service('chartService', _chart2.chartService).config(function ($stateProvider, $urlRouterProvider) {
   $stateProvider.state('chart', {
     url: '/chart',
-    component: 'chart'
+    component: 'chart',
+    resolve: {
+      chartData: function chartData(chartService) {
+        return chartService.getCharts();
+      }
+    }
   });
 
   $urlRouterProvider.otherwise('/');
@@ -8257,11 +8266,11 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _discover = __webpack_require__(67);
+var _discover = __webpack_require__(68);
 
-var _discover2 = __webpack_require__(68);
+var _discover2 = __webpack_require__(69);
 
-__webpack_require__(102);
+__webpack_require__(104);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8295,7 +8304,7 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _bottom = __webpack_require__(69);
+var _bottom = __webpack_require__(70);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8317,7 +8326,7 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _home = __webpack_require__(70);
+var _home = __webpack_require__(71);
 
 var _angularUiRouter = __webpack_require__(6);
 
@@ -8366,7 +8375,7 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _navbar = __webpack_require__(71);
+var _navbar = __webpack_require__(72);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8386,7 +8395,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.rootComponent = undefined;
 
-var _root = __webpack_require__(114);
+var _root = __webpack_require__(117);
 
 var _root2 = _interopRequireDefault(_root);
 
@@ -8419,13 +8428,13 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-__webpack_require__(103);
+__webpack_require__(105);
 
-var _search = __webpack_require__(72);
+var _search = __webpack_require__(73);
 
 var _search2 = __webpack_require__(29);
 
-var _searchResult = __webpack_require__(74);
+var _searchResult = __webpack_require__(75);
 
 var _angularUiRouter = __webpack_require__(6);
 
@@ -8461,15 +8470,15 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _upload = __webpack_require__(75);
+var _upload = __webpack_require__(76);
 
 var _angularUiRouter = __webpack_require__(6);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-var _upload2 = __webpack_require__(76);
+var _upload2 = __webpack_require__(77);
 
-__webpack_require__(104);
+__webpack_require__(107);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8507,7 +8516,7 @@ exports.authComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _auth = __webpack_require__(105);
+var _auth = __webpack_require__(108);
 
 var _auth2 = _interopRequireDefault(_auth);
 
@@ -8552,7 +8561,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.loginComponent = undefined;
 
-var _login = __webpack_require__(106);
+var _login = __webpack_require__(109);
 
 var _login2 = _interopRequireDefault(_login);
 
@@ -8613,7 +8622,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.registerComponent = undefined;
 
-var _register = __webpack_require__(107);
+var _register = __webpack_require__(110);
 
 var _register2 = _interopRequireDefault(_register);
 
@@ -8677,7 +8686,7 @@ exports.cartComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _cart = __webpack_require__(108);
+var _cart = __webpack_require__(111);
 
 var _cart2 = _interopRequireDefault(_cart);
 
@@ -8819,7 +8828,9 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.chartComponent = undefined;
 
-var _chart = __webpack_require__(109);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _chart = __webpack_require__(112);
 
 var _chart2 = _interopRequireDefault(_chart);
 
@@ -8828,12 +8839,34 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var chartComponent = exports.chartComponent = {
+  bindings: {
+    chartData: '<'
+  },
   templateUrl: _chart2.default,
-  controller: function chartComponent() {
-    'ngInject';
+  controller: function () {
+    function chartComponent() {
+      'ngInject';
 
-    _classCallCheck(this, chartComponent);
-  }
+      _classCallCheck(this, chartComponent);
+    }
+
+    _createClass(chartComponent, [{
+      key: '$onChanges',
+      value: function $onChanges(changes) {
+        if (changes.chartData) {
+          console.log('chartComponent:::::', this.chartData);
+          this.songsData = Object.assign({}, this.chartData);
+          var array = [];
+          for (var key in this.songsData) {
+            array.push(this.songsData[key]);
+          }
+          this.songsData = array;
+        }
+      }
+    }]);
+
+    return chartComponent;
+  }()
 };
 
 /***/ }),
@@ -8846,11 +8879,54 @@ var chartComponent = exports.chartComponent = {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var chartService = exports.chartService = function () {
+  function chartService($http) {
+    'ngInject';
+
+    _classCallCheck(this, chartService);
+
+    this.$http = $http;
+  }
+
+  _createClass(chartService, [{
+    key: 'getCharts',
+    value: function getCharts() {
+      var params = {
+        url: '/chart',
+        method: 'GET'
+      };
+      return this.$http(params).then(function (response) {
+        console.log('chart::::', response.data);
+        return response.data;
+      });
+    }
+  }]);
+
+  return chartService;
+}();
+
+;
+
+/***/ }),
+/* 68 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.discoverComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _discover = __webpack_require__(110);
+var _discover = __webpack_require__(113);
 
 var _discover2 = _interopRequireDefault(_discover);
 
@@ -8864,15 +8940,12 @@ var discoverComponent = exports.discoverComponent = {
   },
   templateUrl: _discover2.default,
   controller: function () {
-    function discoverComponent() {
+    function discoverComponent($http) {
       'ngInject';
-      // this.imgObj = {
-      //   // "width" : "250px",
-      //   "margin-top" : '20px',
-      //   "margin-right" : '20px'
-      // };
 
       _classCallCheck(this, discoverComponent);
+
+      this.$http = $http;
     }
 
     _createClass(discoverComponent, [{
@@ -8886,6 +8959,17 @@ var discoverComponent = exports.discoverComponent = {
           }
           this.albumData = array;
         }
+      }
+    }, {
+      key: 'countGood',
+      value: function countGood(title) {
+        return this.$http({
+          url: '/count/:title',
+          method: 'PUT',
+          params: {
+            'title': title
+          }
+        });
       }
 
       // arrayBufferToBase64(buffer) {
@@ -8916,7 +9000,7 @@ var discoverComponent = exports.discoverComponent = {
 };
 
 /***/ }),
-/* 68 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8963,7 +9047,7 @@ var discoverService = exports.discoverService = function () {
 ;
 
 /***/ }),
-/* 69 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8974,7 +9058,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.bottomComponent = undefined;
 
-var _bottom = __webpack_require__(111);
+var _bottom = __webpack_require__(114);
 
 var _bottom2 = _interopRequireDefault(_bottom);
 
@@ -8992,7 +9076,7 @@ var bottomComponent = exports.bottomComponent = {
 };
 
 /***/ }),
-/* 70 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9003,7 +9087,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.homeComponent = undefined;
 
-var _home = __webpack_require__(112);
+var _home = __webpack_require__(115);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -9021,7 +9105,7 @@ var homeComponent = exports.homeComponent = {
 };
 
 /***/ }),
-/* 71 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9032,7 +9116,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.navbarComponent = undefined;
 
-var _navbar = __webpack_require__(113);
+var _navbar = __webpack_require__(116);
 
 var _navbar2 = _interopRequireDefault(_navbar);
 
@@ -9096,7 +9180,7 @@ var navbarComponent = exports.navbarComponent = {
 };
 
 /***/ }),
-/* 72 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9109,7 +9193,7 @@ exports.searchComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _search = __webpack_require__(115);
+var _search = __webpack_require__(118);
 
 var _search2 = _interopRequireDefault(_search);
 
@@ -9194,7 +9278,7 @@ var searchComponent = exports.searchComponent = {
 };
 
 /***/ }),
-/* 73 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9205,7 +9289,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.searchResultComponent = undefined;
 
-var _searchResult = __webpack_require__(116);
+var _searchResult = __webpack_require__(119);
 
 var _searchResult2 = _interopRequireDefault(_searchResult);
 
@@ -9275,7 +9359,8 @@ function resultCtrl($scope, $stateParams, searchService, $http) {
   $scope.imgObj = {
     "width": "150px",
     "margin-top": '20px',
-    "margin-right": '20px'
+    "margin-right": '20px',
+    "margin-left": '20px'
   };
 
   $scope.playNg = function (index) {
@@ -9295,7 +9380,7 @@ function resultCtrl($scope, $stateParams, searchService, $http) {
 }
 
 /***/ }),
-/* 74 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9310,9 +9395,11 @@ var _angular = __webpack_require__(3);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _searchResult = __webpack_require__(73);
+var _searchResult = __webpack_require__(74);
 
 var _search = __webpack_require__(29);
+
+__webpack_require__(106);
 
 var _angularUiRouter = __webpack_require__(6);
 
@@ -9332,7 +9419,7 @@ var searchResultModule = exports.searchResultModule = _angular2.default.module('
 }).name;
 
 /***/ }),
-/* 75 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9345,7 +9432,7 @@ exports.uploadComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _upload = __webpack_require__(117);
+var _upload = __webpack_require__(120);
 
 var _upload2 = _interopRequireDefault(_upload);
 
@@ -9440,7 +9527,7 @@ var uploadComponent = exports.uploadComponent = {
 };
 
 /***/ }),
-/* 76 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9496,7 +9583,7 @@ var uploadService = exports.uploadService = function () {
 ;
 
 /***/ }),
-/* 77 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10032,7 +10119,7 @@ angular_1.ng.module('ui.router.state').directive('uiSref', uiSref).directive('ui
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10446,7 +10533,7 @@ angular_1.ng.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10810,7 +10897,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10900,7 +10987,7 @@ exports.Ng1LocationServices = Ng1LocationServices;
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10948,7 +11035,7 @@ angular_1.ng.module('ui.router.state').filter('isState', $IsStateFilter).filter(
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10979,7 +11066,7 @@ exports.getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11176,7 +11263,7 @@ var scopeBindings = function scopeBindings(bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11384,7 +11471,7 @@ exports.UrlRouterProvider = UrlRouterProvider;
 //# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11413,7 +11500,7 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28387,7 +28474,7 @@ if(window.console){console.log('WARNING: Tried to load angular more than once.')
 bindJQuery();publishExternalAPI(angular);angular.module("ngLocale",[],["$provide",function($provide){var PLURAL_CATEGORY={ZERO:"zero",ONE:"one",TWO:"two",FEW:"few",MANY:"many",OTHER:"other"};function getDecimals(n){n=n+'';var i=n.indexOf('.');return i==-1?0:n.length-i-1;}function getVF(n,opt_precision){var v=opt_precision;if(undefined===v){v=Math.min(getDecimals(n),3);}var base=Math.pow(10,v);var f=(n*base|0)%base;return{v:v,f:f};}$provide.value("$locale",{"DATETIME_FORMATS":{"AMPMS":["AM","PM"],"DAY":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"ERANAMES":["Before Christ","Anno Domini"],"ERAS":["BC","AD"],"FIRSTDAYOFWEEK":6,"MONTH":["January","February","March","April","May","June","July","August","September","October","November","December"],"SHORTDAY":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"SHORTMONTH":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"STANDALONEMONTH":["January","February","March","April","May","June","July","August","September","October","November","December"],"WEEKENDRANGE":[5,6],"fullDate":"EEEE, MMMM d, y","longDate":"MMMM d, y","medium":"MMM d, y h:mm:ss a","mediumDate":"MMM d, y","mediumTime":"h:mm:ss a","short":"M/d/yy h:mm a","shortDate":"M/d/yy","shortTime":"h:mm a"},"NUMBER_FORMATS":{"CURRENCY_SYM":"$","DECIMAL_SEP":".","GROUP_SEP":",","PATTERNS":[{"gSize":3,"lgSize":3,"maxFrac":3,"minFrac":0,"minInt":1,"negPre":"-","negSuf":"","posPre":"","posSuf":""},{"gSize":3,"lgSize":3,"maxFrac":2,"minFrac":2,"minInt":1,"negPre":'-\xA4',"negSuf":"","posPre":'\xA4',"posSuf":""}]},"id":"en-us","localeID":"en_US","pluralCat":function pluralCat(n,opt_precision){var i=n|0;var vf=getVF(n,opt_precision);if(i==1&&vf.v==0){return PLURAL_CATEGORY.ONE;}return PLURAL_CATEGORY.OTHER;}});}]);jqLite(window.document).ready(function(){angularInit(window.document,bootstrap);});})(window);!window.angular.$$csp().noInlineStyle&&window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28410,7 +28497,7 @@ __export(__webpack_require__(10));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28478,7 +28565,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28518,7 +28605,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28561,7 +28648,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28592,7 +28679,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28649,7 +28736,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28674,7 +28761,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28692,7 +28779,7 @@ __export(__webpack_require__(24));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28709,7 +28796,7 @@ __export(__webpack_require__(18));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28727,7 +28814,7 @@ __export(__webpack_require__(19));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28748,7 +28835,7 @@ __export(__webpack_require__(8));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28782,7 +28869,7 @@ __export(__webpack_require__(28));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28801,7 +28888,7 @@ __export(__webpack_require__(47));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28814,12 +28901,6 @@ function __export(m) {
 }
 __export(__webpack_require__(48));
 //# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 101 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 102 */
@@ -28843,13 +28924,31 @@ __export(__webpack_require__(48));
 /* 105 */
 /***/ (function(module, exports) {
 
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports) {
+
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/auth.html';
 var html = "\n\t\n\t<login>\n\t</login>\n\n\n\n\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 106 */
+/* 109 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/login/login.html';
@@ -28858,7 +28957,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 107 */
+/* 110 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/register/register.html';
@@ -28867,7 +28966,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 108 */
+/* 111 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/cart/cart.html';
@@ -28876,25 +28975,25 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 109 */
+/* 112 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/chart/chart.html';
-var html = "<div>\n<h3>Music Tracks chart</h3>\n</div>";
+var html = "<div class=\"titlebg\">\n  <h3>CHART</h3>\n</div>\n\n<table>\n  <thead>\n    <tr>\n      <th>title</th>\n      <th>Album</th>\n      <th>Good</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr ng-repeat=\"song in $ctrl.songsData | orderBy:'-click'\">\n      <td><img ng-src=\"{{song.picture}}\" class=\"circle\" />{{song.title}}</td>\n      <td>{{song.album}}</td>\n      <td><h4>{{song.click}}</h4></td>\n    </tr>\n  </tbody>\n</table>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 110 */
+/* 113 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/discover/discover.html';
-var html = "<h3>DISCOVER</h3>\n\n<div class=\"discovercwrap\">\n\n<div class=\"polaroid\" ng-repeat=\"song in $ctrl.albumData\">\n<div class=\"container\">\n  <img ng-src=\"{{song.picture}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\">\n  <div class=\"middle\">\n    <audio id=\"{{$index}}\" ng-src=\"{{song.filename}}\"></audio>\n    <div class=\"text valign-wrapper\">\n      <a href=\"#\" ng-click=\"$ctrl.playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle waves-effect valign\"></span>\n      </a>\n      \n    </div>\n    <div class=\"right rb\">\n      <a class=\"waves-effect waves-circle waves-light btn-floating secondary-content\"><i class=\"material-icons\">add</i></a>\n    </div>\n  </div>\n</div>\n  <div class=\"content\">\n    <p>\n    {{song.album}}\n    </p>\n  </div>\n</div>\n</div>\n\n<!-- <div ng-repeat=\"song in $ctrl.albumData\">\n<a class=\"lightbox\" href=\"#{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n</a> \n<div class=\"lightbox-target\" id=\"{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n   <a class=\"lightbox-close\" href=\"#\"></a>\n</div>\n</div> -->\n\n<!-- <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture.data.data)}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\"> -->\n";
+var html = "<div class=\"titlebg\">\n  <h3>DISCOVER</h3>\n</div>\n<div class=\"discovercwrap\">\n\n<div class=\"polaroid\" ng-repeat=\"song in $ctrl.albumData\">\n<div class=\"container\">\n  <img ng-src=\"{{song.picture}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\">\n  <div class=\"middle\">\n    <audio id=\"{{$index}}\" ng-src=\"{{song.filename}}\"></audio>\n    <div class=\"text valign-wrapper\">\n      <a href=\"#\" ng-click=\"$ctrl.playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle waves-effect valign\"></span>\n      </a>\n      \n    </div>\n    <div class=\"right rb\">\n      <a class=\"waves-effect waves-circle waves-light btn-floating secondary-content\" ng-click=\"$ctrl.countGood(song.title)\"><span class=\"glyphicon glyphicon-plus\"></span></a>\n    </div>\n  </div>\n</div>\n  <div class=\"content\">\n    <p>\n    {{song.album}}\n    </p>\n  </div>\n</div>\n</div>\n\n<!-- <div ng-repeat=\"song in $ctrl.albumData\">\n<a class=\"lightbox\" href=\"#{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n</a> \n<div class=\"lightbox-target\" id=\"{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n   <a class=\"lightbox-close\" href=\"#\"></a>\n</div>\n</div> -->\n\n<!-- <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture.data.data)}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\"> -->\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 111 */
+/* 114 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/footer/bottom.html';
@@ -28903,25 +29002,25 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 112 */
+/* 115 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/home/home.html';
-var html = "<div id=\"index-banner\" class=\"parallax-container\">\n  <div class=\"section no-pad-bot\">\n    <div class=\"container\">\n      <br><br>\n      <h1 class=\"header center cyan-text text-lighten-2\">Welcome to MusicTracks</h1>\n      <div class=\"row center\">\n        <h5 class=\"header col s12 light\">Music site for everyone</h5>\n      </div>\n      <div class=\"row center\">\n        <a href=\"http://materializecss.com/getting-started.html\" id=\"download-button\" class=\"btn-large waves-effect waves-light cyan lighten-1\">Get Started</a>\n      </div>\n      <br><br>\n\n    </div>\n  </div>\n  <div class=\"parallax\">\n    <img src=\"https://s3.ap-northeast-2.amazonaws.com/test-uphere/mainimg.jpg\" alt=\"Unsplashed background img 1\" />\n  </div>\n</div>\n\n\n  <div class=\"container\">\n    <div class=\"section\">\n\n      <!--   Icon Section   -->\n      <div class=\"row\">\n        <div class=\"col s12 m4\">\n          <div class=\"icon-block\">\n            <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-music\"></span></h2>\n            <h5 class=\"center\">Speeds up development</h5>\n\n            <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>\n          </div>\n        </div>\n\n        <div class=\"col s12 m4\">\n          <div class=\"icon-block\">\n            <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-cloud\"></span></h2>\n            <h5 class=\"center\">User Experience Focused</h5>\n\n            <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>\n          </div>\n        </div>\n\n        <div class=\"col s12 m4\">\n          <div class=\"icon-block\">\n            <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-glass\"></span></h2>\n            <h5 class=\"center\">Easy to work with</h5>\n\n            <p class=\"light\">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>\n          </div>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n\n";
+var html = "<div id=\"index-banner\" class=\"parallax-container\">\n  <div class=\"section no-pad-bot\">\n    <div class=\"container\">\n      <br><br>\n      <h1 class=\"header center white-text text-lighten-2\">Welcome to MusicTracks</h1>\n      <div class=\"row center\">\n        <h5 class=\"header col s12 light\" style=\"color:white\">Music site for everyone</h5>\n      </div>\n      <div class=\"row center\">\n        <a href=\"http://materializecss.com/getting-started.html\" id=\"download-button\" class=\"btn-large waves-effect waves-light white lighten-1\" style=\"color:black\">Get Started</a>\n      </div>\n      <br><br>\n\n    </div>\n  </div>\n  <div class=\"parallax\">\n    <img src=\"https://s3.ap-northeast-2.amazonaws.com/test-uphere/mainimg.jpg\" style=\"width: 100%;height:auto;display:block\"/>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"section\">\n    <!--   Icon Section   -->\n    <div class=\"row\">\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-music\"></span></h2>\n          <h5 class=\"center\">Speeds up development</h5>\n\n          <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-cloud\"></span></h2>\n          <h5 class=\"center\">User Experience Focused</h5>\n\n          <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-glass\"></span></h2>\n          <h5 class=\"center\">Easy to work with</h5>\n\n          <p class=\"light\">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 113 */
+/* 116 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/nav/navbar.html';
-var html = "<nav>\n  <div class=\"nav-wrapper\">\n    <div class=\"row\">\n      <a href=\"/\" class=\"brand-logo center\">MUSICTRACKS</a>\n      <div class=\"col s2\">\n        <search></search>\n      </div>\n      <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>\n      <ul id=\"nav-mobile\" class=\"left hide-on-med-and-down\">\n        <li><a ui-sref=\"main\">HOME</a></li>\n        <li><a ui-sref=\"discover\">DISCOVER</a></li>\n        <li><a ui-sref=\"chart\">CHART</a></li>\n      </ul>\n      <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">\n        <li ng-if=\"!onLogin\"><div class=\"g-signin2\" data-onsuccess=\"onSignIn\"></div></li>\n        <li ng-if=\"onLogin\">  \n          <img ng-src=\"{{userImg}}\" ng-style=\"profileStyle\"/>\n          <span ng-style=\"nameStyle\">{{userName}}</span>\n        </li>\n        <!-- <li><a id =\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li> -->\n        </ul>\n       <!--  <li ng-if=\"onLogin\"> -->\n        <div class=\"right\">\n          <a class=\"dropdown-button\" href=\"#\" data-activates=\"dropdown1\" ng-if=\"onLogin\">\n            Dropdown\n          <span class=\"glyphicon glyphicon-triangle-bottom\"></span>\n          </a>\n        </div>\n        <!-- </li> -->\n      <!-- </ul> -->\n    </div>\n  </div>\n</nav>\n\n<ul id=\"dropdown1\" class=\"dropdown-content\">\n  <li><a href=\"#\">MY PROFILE</a></li>\n  <li><a ui-sref=\"upload\">UPLOAD</a></li>\n  <li><a ui-sref=\"cart\">CART</a></li>\n  <li class=\"divider\"></li>\n  <li><a id =\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li>\n</ul>\n";
+var html = "<nav class=\"grey darken-4\">\n  <div class=\"nav-wrapper\">\n    <div class=\"row\">\n      <a href=\"/\" class=\"brand-logo center\">MUSICTRACKS</a>\n      <div class=\"col s2\">\n        <search></search>\n      </div>\n      <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>\n      <ul id=\"nav-mobile\" class=\"left hide-on-med-and-down\">\n        <li><a ui-sref=\"main\">HOME</a></li>\n        <li><a ui-sref=\"discover\">DISCOVER</a></li>\n        <li><a ui-sref=\"chart\">CHART</a></li>\n      </ul>\n      <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">\n        <li ng-if=\"!onLogin\">\n          <div class=\"g-signin2 btn btn-info btn-lg\" data-onsuccess=\"onSignIn\">\n            <span class=\"glyphicon glyphicon-user\"></span> LOGIN\n          </div>\n        </li>\n        <li ng-if=\"onLogin\">  \n          <img ng-src=\"{{userImg}}\" ng-style=\"profileStyle\"/>\n          <span ng-style=\"nameStyle\">{{userName}}</span>\n        </li>\n        </ul>\n        <div class=\"right\">\n          <a class=\"dropdown-button\" href=\"#\" data-activates=\"dropdown1\" ng-if=\"onLogin\">\n            Dropdown\n          <span class=\"glyphicon glyphicon-triangle-bottom\"></span>\n          </a>\n        </div>\n        <!-- </li> -->\n      <!-- </ul> -->\n    </div>\n  </div>\n</nav>\n\n<ul id=\"dropdown1\" class=\"dropdown-content\" ng-if=\"onLogin\">\n  <li><a ui-sref=\"upload\">UPLOAD</a></li>\n  <li><a ui-sref=\"cart\">CART</a></li>\n  <li class=\"divider\"></li>\n  <li><a id =\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li>\n</ul>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 114 */
+/* 117 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/root.html';
@@ -28930,7 +29029,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 115 */
+/* 118 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/search/search.html';
@@ -28939,16 +29038,16 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 116 */
+/* 119 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/search/searchResult.html';
-var html = "<h3>Search Results {{ keyword }}</h3>\n\n\n  <h5>\n    {{ searchs.length }} tracks matching \"{{ keyword }}\"\n  </h5>\n\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"imgObj\">\n    <span class=\"title\">{{song.title}}</span>\n    <p>{{song.artist}} <br>\n       album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </p>\n    <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"playNg($index)\">\n      <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>\n    <a href=\"#!\" class=\"secondary-content\"><i class=\"material-icons\">grade</i></a>\n  </li>\n</ul>\n";
+var html = "<div class=\"titlebg\">\n  <h3><span class=\"glyphicon glyphicon-search\"></span> Search Results {{ keyword }}</h3>\n</div>\n\n<h5>\n  {{ searchs.length }} tracks matching \"{{ keyword }}\"\n</h5>\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"imgObj\">\n    <span class=\"title\">{{song.title}}\n       / {{song.artist}} / album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </span>\n    \n\n    <div class=\"secondary-content\">\n      <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>  \n    </div>\n    \n    <a href=\"#!\" class=\"secondary-content\"><span class=\"glyphicon glyphicon-star\"></span></a>\n  </li>\n</ul>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 117 */
+/* 120 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/upload.html';
@@ -28957,7 +29056,7 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 118 */
+/* 121 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

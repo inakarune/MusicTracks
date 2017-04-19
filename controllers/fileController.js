@@ -173,8 +173,10 @@ var discoverFile = function (req, res) {
   });
 };
 
-var chartFile = function(req, res){
-
+var chartFile = function(req, res){console.log('chartFile')
+  Song.find({}, function(err, data){
+    res.status(200).send(data);
+  });
 };
 
 var getUploadedFileList = function(req, res){
@@ -194,13 +196,21 @@ var getUploadedFileList = function(req, res){
   });
 };
 
+var addCount = function(req, res){console.log('add count', req.query)
+  var query = { "title": req.query.title };
+  Song.findOneAndUpdate(query, { $inc: { "click": 1 }}, function(err, data){
+    res.status(201).send('add success.');
+  });
+};
+
 module.exports = {
   downloadFile: downloadFile,
   uploadFile: uploadFile,
   searchFile : searchFile,
   discoverFile: discoverFile,
   chartFile: chartFile,
-  getUploadedFileList: getUploadedFileList
+  getUploadedFileList: getUploadedFileList,
+  addCount: addCount
 };
 
   // var files = req.files;

@@ -1,25 +1,29 @@
-<h3>Search Results {{ keyword }}</h3>
+<div class="titlebg">
+  <h3><span class="glyphicon glyphicon-search"></span> Search Results {{ keyword }}</h3>
+</div>
 
-
-  <h5>
-    {{ searchs.length }} tracks matching "{{ keyword }}"
-  </h5>
-
+<h5>
+  {{ searchs.length }} tracks matching "{{ keyword }}"
+</h5>
 
 <ul class="collection">
   <li class="collection-item avatar" ng-repeat="song in searchs">
     <img ng-src="{{song.picture}}" ng-style="imgObj">
-    <span class="title">{{song.title}}</span>
-    <p>{{song.artist}} <br>
-       album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}
-    </p>
-    <audio id="{{$index}}" src="{{song.filename}}"></audio>
+    <span class="title">{{song.title}}
+       / {{song.artist}} / album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}
+    </span>
+    
+
+    <div class="secondary-content">
+      <audio id="{{$index}}" src="{{song.filename}}"></audio>
       <a href="#" class="btn btn-info btn-lg" ng-click="playNg($index)">
-      <span class="glyphicon glyphicon-play-circle"></span> Play
+        <span class="glyphicon glyphicon-play-circle"></span> Play
       </a>
       <a href="#" class="btn btn-info btn-lg" ng-click="sendCart(song.title, song.artist, song.album, song.price)">
         <span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart
-      </a>
+      </a>  
+    </div>
+    
     <a href="#!" class="secondary-content"><span class="glyphicon glyphicon-star"></span></a>
   </li>
 </ul>

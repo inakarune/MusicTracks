@@ -5,13 +5,9 @@ export const discoverComponent = {
   },
   templateUrl,
   controller: class discoverComponent {
-    constructor(){
+    constructor($http){
       'ngInject'
-      // this.imgObj = {
-      //   // "width" : "250px",
-      //   "margin-top" : '20px',
-      //   "margin-right" : '20px'
-      // };
+      this.$http = $http;
     }
 
     $onChanges(changes) {
@@ -23,6 +19,16 @@ export const discoverComponent = {
         }
         this.albumData = array;
       }
+    }
+
+    countGood(title){
+      return this.$http({
+        url: '/count/:title',
+        method: 'PUT',
+        params: {
+          'title': title
+        }
+      });
     }
 
     // arrayBufferToBase64(buffer) {

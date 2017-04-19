@@ -1,5 +1,5 @@
 root {
-  color: chocolate;
+  color: black;
   background-color: black; }
 
 root .root {
@@ -33,8 +33,7 @@ root bottom {
   left: 0; }
 
 root .contents {
-  margin: 30px;
-  padding: 30px; }
+  margin: 30px; }
 search .input-field {
   position: absolute;
   left: 50px;
@@ -42,6 +41,33 @@ search .input-field {
 
 search input[type=search] {
   border-radius: 10px; }
+searchResult .titlebg {
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  background-size: auto;
+  margin-bottom: 50px; }
+
+searchResult .titlebg h3 {
+  padding-top: 75px;
+  padding-left: 40px;
+  color: white; }
+chart .titlebg {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/test-uphere/concert.jpg");
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  background-size: auto;
+  margin-bottom: 50px; }
+
+chart .titlebg h3 {
+  padding-top: 75px;
+  padding-left: 40px;
+  color: white; }
+
+chart .circle {
+  width: 50px;
+  margin-right: 30px; }
 upload .alert {
   padding: 20px;
   background-color: #f44336;
@@ -85,8 +111,22 @@ cart md-whiteframe {
   width: 100%;
   margin-bottom: 18px;
   justify-content: flex-start; }
+discover .titlebg {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/test-uphere/discover.jpg");
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  background-size: auto;
+  margin-bottom: 50px; }
+
+discover .titlebg h3 {
+  padding-top: 75px;
+  padding-left: 40px;
+  color: white; }
+
 discover discoverwrap {
-  clear: both; }
+  clear: both;
+  margin: 0 auto; }
 
 discover .container {
   position: relative;

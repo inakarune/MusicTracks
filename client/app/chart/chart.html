@@ -1,3 +1,20 @@
-<div>
-<h3>Music Tracks chart</h3>
+<div class="titlebg">
+  <h3>CHART</h3>
 </div>
+
+<table>
+  <thead>
+    <tr>
+      <th>title</th>
+      <th>Album</th>
+      <th>Good</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="song in $ctrl.songsData | orderBy:'-click'">
+      <td><img ng-src="{{song.picture}}" class="circle" />{{song.title}}</td>
+      <td>{{song.album}}</td>
+      <td><h4>{{song.click}}</h4></td>
+    </tr>
+  </tbody>
+</table>

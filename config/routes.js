@@ -23,4 +23,5 @@ module.exports = function(app){
   app.get('/discover', fileController.discoverFile);
   app.get('/chart', fileController.chartFile);
   app.get('/getUploadedSongList', verifyToken, fileController.getUploadedFileList);
+  app.put('/count/:title', fileController.addCount);
 };

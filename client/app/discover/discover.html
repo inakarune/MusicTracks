@@ -1,5 +1,6 @@
-<h3>DISCOVER</h3>
-
+<div class="titlebg">
+  <h3>DISCOVER</h3>
+</div>
 <div class="discovercwrap">
 
 <div class="polaroid" ng-repeat="song in $ctrl.albumData">
@@ -14,7 +15,7 @@
       
     </div>
     <div class="right rb">
-      <a class="waves-effect waves-circle waves-light btn-floating secondary-content"><span class="glyphicon glyphicon-plus"></span></a>
+      <a class="waves-effect waves-circle waves-light btn-floating secondary-content" ng-click="$ctrl.countGood(song.title)"><span class="glyphicon glyphicon-plus"></span></a>
     </div>
   </div>
 </div>
