@@ -1,4 +1,4 @@
-var cart = function(req, res){
+var cart = function (req, res) {
   var cart = req.signedCookies.cart;
 
   if(!cart){
@@ -7,7 +7,7 @@ var cart = function(req, res){
   res.send(cart);
 };
 
-var cart_item = function(req, res){
+var cart_item = function (req, res) {
   var title = req.query.title;
   req.query.piece = 1;
   var cart = req.signedCookies.cart || [];
@@ -26,7 +26,7 @@ var cart_item = function(req, res){
   res.redirect('/cart');
 };
 
-var cart_delete = function(req, res){
+var cart_delete = function (req, res) {
   var title = req.query.title;
   var cart = req.signedCookies.cart || [];
 
