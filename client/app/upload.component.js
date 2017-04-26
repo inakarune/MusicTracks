@@ -53,7 +53,7 @@ export const uploadComponent = {
     	}
 
       this.progress = true;
-      this.uploadService.insertSong(this.song);
+      this.uploadService.insertSong(this.song)
         .then(res => {
           if(res.data.message === 'success upload!'){
             this.alert = true;
