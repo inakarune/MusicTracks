@@ -4,7 +4,7 @@ export const searchComponent = {
 	bindings: {
 		keyword: '<',
 		searchFile: '&'
-	},
+	},	
 
   templateUrl,
 
