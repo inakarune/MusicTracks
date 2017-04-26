@@ -1,7 +1,7 @@
 var cart = function (req, res) {
   var cart = req.signedCookies.cart;
 
-  if(!cart){
+  if (!cart) {
     res.send([]);
   } 
   res.send(cart);
@@ -12,11 +12,11 @@ var cart_item = function (req, res) {
   req.query.piece = 1;
   var cart = req.signedCookies.cart || [];
   
-  if(!cart.length){
+  if (!cart.length) {
     cart.push(req.query);
   } else {
     for(var i = 0; i < cart.length; i++){
-      if(cart[i].title !== title) {
+      if (cart[i].title !== title) {
         cart.push(req.query);
       }
     }
@@ -30,9 +30,9 @@ var cart_delete = function (req, res) {
   var title = req.query.title;
   var cart = req.signedCookies.cart || [];
 
-  if(cart.length){
+  if (cart.length) {
     for(var i = 0; i < cart.length; i++){
-      if(cart[i].title === title){
+      if (cart[i].title === title) {
         cart.splice(i, 1);
       }
     }
