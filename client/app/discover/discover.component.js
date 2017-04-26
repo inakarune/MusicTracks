@@ -5,12 +5,12 @@ export const discoverComponent = {
   },
   templateUrl,
   controller: class discoverComponent {
-    constructor($http){
+    constructor ($http) {
       'ngInject'
       this.$http = $http;
     }
 
-    $onChanges(changes) {
+    $onChanges (changes) {
       if (changes.serverData) {
         this.albumData = Object.assign({}, this.serverData);
         let array = [];
@@ -21,7 +21,7 @@ export const discoverComponent = {
       }
     }
 
-    countGood(title){
+    countGood (title) {
       return this.$http({
         url: '/count/:title',
         method: 'PUT',
@@ -31,7 +31,7 @@ export const discoverComponent = {
       });
     }
 
-    playNg(index){
+    playNg (index) {
       let idx = index.toString();
       let audio = document.getElementById(idx);
       audio.load();
