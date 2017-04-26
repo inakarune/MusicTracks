@@ -7,7 +7,7 @@ var allowCORS = function (req, res, next) {
   ];
   var origin = req.headers.origin;
 
-  if(allowedOrigins.indexOf(origin) > -1){
+  if (allowedOrigins.indexOf(origin) > -1) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
 
