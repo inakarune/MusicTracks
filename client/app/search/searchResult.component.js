@@ -2,7 +2,7 @@ import templateUrl from './searchResult.html';
 
 export const searchResultComponent = {
   templateUrl,
-  controller: resultCtrl
+  controller: ['searchService', resultCtrl]
 };
 
 function resultCtrl($scope, $stateParams, searchService, $http){ 
