@@ -14,7 +14,7 @@ npm start
 </code></pre>
 
 ### 개발툴
-프론트엔드 개발: AngularJS
+프론트엔드 개발: AngularJS  
 백엔드 개발: MongoDB, NodeJS, Heroku
 
 ### 기능
