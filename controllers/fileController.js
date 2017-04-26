@@ -125,7 +125,7 @@ var discoverFile = function (req, res) {
   });
 };
 
-var chartFile = function(req, res){console.log('chartFile')
+var chartFile = function(req, res){
   Song.find({}, function(err, data){
     res.status(200).send(data);
   });
@@ -148,7 +148,7 @@ var getUploadedFileList = function(req, res){
   });
 };
 
-var addCount = function(req, res){console.log('add count', req.query)
+var addCount = function(req, res){
   var query = { "title": req.query.title };
   Song.findOneAndUpdate(query, { $inc: { "click": 1 }}, function(err, data){
     res.status(201).send('add success.');
