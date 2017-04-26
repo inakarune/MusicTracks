@@ -103,6 +103,19 @@ upload .divider {
   height: 100%;
   background-color: white;
   padding-left: 30px; }
+
+upload .titlebg {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/test-uphere/concert.jpg");
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  background-size: auto;
+  margin-bottom: 50px; }
+
+upload .titlebg h3 {
+  padding-top: 75px;
+  padding-left: 40px;
+  color: white; }
 cart md-whiteframe {
   height: 80px;
   padding-left: 22px;
@@ -111,6 +124,19 @@ cart md-whiteframe {
   width: 100%;
   margin-bottom: 18px;
   justify-content: flex-start; }
+
+cart .titlebg {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/test-uphere/concert.jpg");
+  width: 100%;
+  height: 200px;
+  text-align: left;
+  background-size: auto;
+  margin-bottom: 50px; }
+
+cart .titlebg h3 {
+  padding-top: 75px;
+  padding-left: 40px;
+  color: white; }
 discover .titlebg {
   background-image: url("https://s3.ap-northeast-2.amazonaws.com/test-uphere/discover.jpg");
   width: 100%;

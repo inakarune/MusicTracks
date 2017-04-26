@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 121);
+/******/ 	return __webpack_require__(__webpack_require__.s = 109);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -85,7 +85,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
 
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var w = typeof window === 'undefined' ? {} : window;
 var angular = w.angular || {};
 exports.fromJson = angular.fromJson || JSON.parse.bind(JSON);
@@ -1070,16 +1070,6 @@ exports.pattern = pattern;
 "use strict";
 
 
-__webpack_require__(87);
-module.exports = angular;
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 exports.notImplemented = function (fnname) {
     return function () {
         throw new Error(fnname + "(): No coreservices implementation for UI-Router is loaded.");
@@ -1093,7 +1083,7 @@ exports.services = services;
 //# sourceMappingURL=coreservices.js.map
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1108,52 +1098,31 @@ function __export(m) {
     if (!exports.hasOwnProperty(p)) exports[p] = m[p];
   }
 }
+__export(__webpack_require__(80));
+__export(__webpack_require__(87));
 __export(__webpack_require__(88));
-__export(__webpack_require__(95));
-__export(__webpack_require__(96));
-__export(__webpack_require__(97));
-__export(__webpack_require__(98));
-__export(__webpack_require__(99));
-__export(__webpack_require__(100));
-__export(__webpack_require__(101));
+__export(__webpack_require__(89));
+__export(__webpack_require__(90));
+__export(__webpack_require__(91));
+__export(__webpack_require__(92));
+__export(__webpack_require__(93));
 __export(__webpack_require__(31));
 __export(__webpack_require__(36));
-__export(__webpack_require__(94));
+__export(__webpack_require__(86));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/**
- * Main entry point for angular 1.x build
- * @module ng1
- */ /** */
 
 
-function __export(m) {
-  for (var p in m) {
-    if (!exports.hasOwnProperty(p)) exports[p] = m[p];
-  }
-}
-var core = __webpack_require__(5);
-exports.core = core;
-__export(__webpack_require__(5));
-__export(__webpack_require__(21));
-__export(__webpack_require__(22));
-__export(__webpack_require__(30));
-__webpack_require__(80);
-__webpack_require__(78);
-__webpack_require__(82);
 __webpack_require__(79);
-__webpack_require__(86);
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = "ui.router";
-//# sourceMappingURL=index.js.map
+module.exports = angular;
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1305,6 +1274,37 @@ exports.joinNeighborsR = joinNeighborsR;
 //# sourceMappingURL=strings.js.map
 
 /***/ }),
+/* 7 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/**
+ * Main entry point for angular 1.x build
+ * @module ng1
+ */ /** */
+
+
+function __export(m) {
+  for (var p in m) {
+    if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+  }
+}
+var core = __webpack_require__(4);
+exports.core = core;
+__export(__webpack_require__(4));
+__export(__webpack_require__(21));
+__export(__webpack_require__(22));
+__export(__webpack_require__(30));
+__webpack_require__(72);
+__webpack_require__(70);
+__webpack_require__(74);
+__webpack_require__(71);
+__webpack_require__(78);
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = "ui.router";
+//# sourceMappingURL=index.js.map
+
+/***/ }),
 /* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1431,7 +1431,7 @@ exports.TargetState = TargetState;
 "use strict";
 
 
-var ng_from_import = __webpack_require__(3);
+var ng_from_import = __webpack_require__(5);
 var ng_from_global = angular;
 exports.ng = ng_from_import && ng_from_import.module ? ng_from_import : ng_from_global;
 //# sourceMappingURL=angular.js.map
@@ -1480,7 +1480,7 @@ exports.ng = ng_from_import && ng_from_import.module ? ng_from_import : ng_from_
 
 var hof_1 = __webpack_require__(2);
 var predicates_1 = __webpack_require__(1);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 /** @hidden */
 function uiViewString(viewData) {
     if (!viewData) return 'ui-view (defunct)';
@@ -1713,7 +1713,7 @@ exports.trace = trace;
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var predicates_1 = __webpack_require__(1);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var paramType_1 = __webpack_require__(24);
 var hasOwn = Object.prototype.hasOwnProperty;
 var isShorthand = function isShorthand(cfg) {
@@ -1899,9 +1899,9 @@ exports.Param = Param;
  */ /** for typedoc */
 
 var common_1 = __webpack_require__(0);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var trace_1 = __webpack_require__(10);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 var predicates_1 = __webpack_require__(1);
 // TODO: explicitly make this user configurable
 exports.defaultResolvePolicy = {
@@ -2056,7 +2056,7 @@ var TransitionHookScope;
 
 
 var common_1 = __webpack_require__(0);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 var RejectType;
 (function (RejectType) {
     RejectType[RejectType["SUPERSEDED"] = 2] = "SUPERSEDED";
@@ -2135,11 +2135,11 @@ exports.Rejection = Rejection;
 
 
 var common_1 = __webpack_require__(0);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(10);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var rejectFactory_1 = __webpack_require__(14);
 var targetState_1 = __webpack_require__(8);
 var defaultOptions = {
@@ -2645,11 +2645,11 @@ exports.PathFactory = PathFactory;
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(10);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var interface_1 = __webpack_require__(35);
 var resolvable_1 = __webpack_require__(12);
 var pathFactory_1 = __webpack_require__(18);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 var when = interface_1.resolvePolicies.when;
 var ALL_WHENS = [when.EAGER, when.LAZY];
 var EAGER_WHENS = [when.EAGER];
@@ -2880,7 +2880,7 @@ var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var predicates_1 = __webpack_require__(1);
 var param_1 = __webpack_require__(11);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 /** @hidden */
 function quoteRegExp(string, param) {
     var surroundPattern = ['', ''],
@@ -3378,13 +3378,13 @@ exports.UrlMatcher = UrlMatcher;
 /** for typedoc */
 
 var angular_1 = __webpack_require__(9);
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(22);
-var templateFactory_1 = __webpack_require__(84);
+var templateFactory_1 = __webpack_require__(76);
 var stateProvider_1 = __webpack_require__(30);
-var onEnterExitRetain_1 = __webpack_require__(83);
-var locationServices_1 = __webpack_require__(81);
-var urlRouterProvider_1 = __webpack_require__(85);
+var onEnterExitRetain_1 = __webpack_require__(75);
+var locationServices_1 = __webpack_require__(73);
+var urlRouterProvider_1 = __webpack_require__(77);
 angular_1.ng.module("ui.router.angular1", []);
 var mod_init = angular_1.ng.module('ui.router.init', []);
 var mod_util = angular_1.ng.module('ui.router.util', ['ng', 'ui.router.init']);
@@ -3507,7 +3507,7 @@ exports.getLocals = function (ctx) {
 "use strict";
 
 
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 function getNg1ViewConfigFactory() {
     var templateFactory = null;
     return function (path, view) {
@@ -4073,7 +4073,7 @@ exports.makeEvent = makeEvent;
 
 
 var trace_1 = __webpack_require__(10);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
@@ -4745,11 +4745,11 @@ exports.Transition = Transition;
 var interface_1 = __webpack_require__(13);
 var transition_1 = __webpack_require__(27);
 var hookRegistry_1 = __webpack_require__(26);
-var resolve_1 = __webpack_require__(91);
-var views_1 = __webpack_require__(93);
-var url_1 = __webpack_require__(92);
-var redirectTo_1 = __webpack_require__(90);
-var onEnterExitRetain_1 = __webpack_require__(89);
+var resolve_1 = __webpack_require__(83);
+var views_1 = __webpack_require__(85);
+var url_1 = __webpack_require__(84);
+var redirectTo_1 = __webpack_require__(82);
+var onEnterExitRetain_1 = __webpack_require__(81);
 var lazyLoad_1 = __webpack_require__(32);
 var transitionEventType_1 = __webpack_require__(43);
 var transitionHook_1 = __webpack_require__(15);
@@ -5027,14 +5027,12 @@ var searchService = exports.searchService = function () {
     key: 'searchSong',
     value: function searchSong(keyword, selected) {
       this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
-      console.log('   getSearches(keyword) =>>>>>>>.', keyword, selected);
       return this.$http({
         method: 'GET',
         url: '/search/:keyword/:condition',
         params: { 'keyword': keyword, 'condition': 'title' }
-      }).then(function (resp) {
-        console.log('return data from server ==>>>>>>>>>> ', resp);
-        return resp.data;
+      }).then(function (response) {
+        return response.data;
       });
     }
   }]);
@@ -5052,7 +5050,7 @@ var searchService = exports.searchService = function () {
 
 /** @module ng1 */ /** for typedoc */
 
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 /**
  * @ngdoc object
  * @name ui.router.state.$stateProvider
@@ -5248,7 +5246,7 @@ exports.Globals = Globals;
 "use strict";
 
 
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 /**
  * A [[TransitionHookFn]] that performs lazy loading
  *
@@ -5361,7 +5359,7 @@ exports.lazyLoadState = lazyLoadState;
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var paramType_1 = __webpack_require__(24);
 /**
  * A registry for parameter types.
@@ -5701,10 +5699,10 @@ exports.UIRouter = UIRouter;
 
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
-var strings_1 = __webpack_require__(7);
+var strings_1 = __webpack_require__(6);
 var hof_1 = __webpack_require__(2);
 var resolvable_1 = __webpack_require__(12);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var parseUrl = function parseUrl(url) {
     if (!predicates_1.isString(url)) return false;
     var root = url.charAt(0) === '^';
@@ -6353,7 +6351,7 @@ exports.StateRegistry = StateRegistry;
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var queue_1 = __webpack_require__(23);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var pathFactory_1 = __webpack_require__(18);
 var node_1 = __webpack_require__(17);
 var transitionService_1 = __webpack_require__(28);
@@ -7728,7 +7726,7 @@ exports.BaseUrlRule = BaseUrlRule;
  */ /** */
 
 
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var common_1 = __webpack_require__(0);
 /** @hidden */
 var makeStub = function makeStub(keys) {
@@ -8131,56 +8129,19 @@ exports.ViewService = ViewService;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.authModule = undefined;
-
-var _angular = __webpack_require__(3);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _auth = __webpack_require__(60);
-
-var _angularUiRouter = __webpack_require__(6);
-
-var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
-
-var _register = __webpack_require__(64);
-
-var _login = __webpack_require__(62);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var authModule = exports.authModule = _angular2.default.module('authModule', [_angularUiRouter2.default, _register.registerModule, _login.loginModule]).component('auth', _auth.authComponent).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-  $stateProvider.state('auth', {
-    url: '/login',
-    component: 'auth'
-  });
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/');
-}).name;
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.cartModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _cart = __webpack_require__(65);
+var _cart = __webpack_require__(58);
 
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-__webpack_require__(102);
+__webpack_require__(94);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8198,7 +8159,6 @@ var cartModule = exports.cartModule = _angular2.default.module('cart', [_angular
             authorization: 'Bearer ' + window.sessionStorage.getItem('accessToken')
           }
         }).then(function (response) {
-          console.log('cartmodule', response);
           return response;
         });
       }
@@ -8209,7 +8169,7 @@ var cartModule = exports.cartModule = _angular2.default.module('cart', [_angular
 }).name;
 
 /***/ }),
-/* 51 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8220,17 +8180,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.chartModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _chart = __webpack_require__(66);
+var _chart = __webpack_require__(59);
 
-var _chart2 = __webpack_require__(67);
+var _chart2 = __webpack_require__(60);
 
-__webpack_require__(103);
+__webpack_require__(95);
 
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
@@ -8251,7 +8211,7 @@ var chartModule = exports.chartModule = _angular2.default.module('chart', [_angu
 }).name;
 
 /***/ }),
-/* 52 */
+/* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8262,15 +8222,15 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.discoverModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _discover = __webpack_require__(68);
+var _discover = __webpack_require__(61);
 
-var _discover2 = __webpack_require__(69);
+var _discover2 = __webpack_require__(62);
 
-__webpack_require__(104);
+__webpack_require__(96);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8289,6 +8249,39 @@ var discoverModule = exports.discoverModule = _angular2.default.module('discover
 }).name;
 
 /***/ }),
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.homeModule = undefined;
+
+var _angular = __webpack_require__(5);
+
+var _angular2 = _interopRequireDefault(_angular);
+
+var _home = __webpack_require__(63);
+
+var _angularUiRouter = __webpack_require__(7);
+
+var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var homeModule = exports.homeModule = _angular2.default.module('homeModule', [_angularUiRouter2.default]).component('home', _home.homeComponent).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
+  $stateProvider.state('main', {
+    url: '/',
+    component: 'home'
+  });
+  $locationProvider.html5Mode(true);
+  $urlRouterProvider.otherwise('/');
+}).name;
+
+/***/ }),
 /* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -8298,17 +8291,19 @@ var discoverModule = exports.discoverModule = _angular2.default.module('discover
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.bottomModule = undefined;
+exports.navbarModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _bottom = __webpack_require__(70);
+var _navbar = __webpack_require__(64);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var bottomModule = exports.bottomModule = _angular2.default.module('bottomModule', []).component('bottom', _bottom.bottomComponent).name;
+var navbarModule = exports.navbarModule = _angular2.default.module('navbarModule', []).component('navbar', _navbar.navbarComponent).config(function ($urlRouterProvider) {
+  $urlRouterProvider.otherwise('/');
+}).name;
 
 /***/ }),
 /* 54 */
@@ -8320,82 +8315,9 @@ var bottomModule = exports.bottomModule = _angular2.default.module('bottomModule
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.homeModule = undefined;
-
-var _angular = __webpack_require__(3);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _home = __webpack_require__(71);
-
-var _angularUiRouter = __webpack_require__(6);
-
-var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var homeModule = exports.homeModule = _angular2.default.module('homeModule', [_angularUiRouter2.default]).component('home', _home.homeComponent).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-  $stateProvider.state('main', {
-    url: '/',
-    component: 'home',
-    resolve: {
-      isAuth: function isAuth($http, $state) {
-        return $http({
-          method: 'GET',
-          url: '/'
-        })
-        // .success(function(data){
-        //   console.log('home',data)
-        //   return data
-        // })
-        .error(function (data, status) {
-
-          $state.go('login');
-        });
-      }
-    }
-  });
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/');
-}).name;
-
-/***/ }),
-/* 55 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.navbarModule = undefined;
-
-var _angular = __webpack_require__(3);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _navbar = __webpack_require__(72);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var navbarModule = exports.navbarModule = _angular2.default.module('navbarModule', []).component('navbar', _navbar.navbarComponent).config(function ($urlRouterProvider) {
-  $urlRouterProvider.otherwise('/');
-}).name;
-
-/***/ }),
-/* 56 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.rootComponent = undefined;
 
-var _root = __webpack_require__(117);
+var _root = __webpack_require__(105);
 
 var _root2 = _interopRequireDefault(_root);
 
@@ -8413,7 +8335,7 @@ var rootComponent = exports.rootComponent = {
 };
 
 /***/ }),
-/* 57 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8424,19 +8346,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.searchModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-__webpack_require__(105);
+__webpack_require__(97);
 
-var _search = __webpack_require__(73);
+var _search = __webpack_require__(65);
 
 var _search2 = __webpack_require__(29);
 
-var _searchResult = __webpack_require__(75);
+var _searchResult = __webpack_require__(67);
 
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
@@ -8455,7 +8377,7 @@ var searchModule = exports.searchModule = _angular2.default.module('search', [_s
 }).name;
 
 /***/ }),
-/* 58 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8466,19 +8388,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.uploadModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _upload = __webpack_require__(76);
+var _upload = __webpack_require__(68);
 
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
-var _upload2 = __webpack_require__(77);
+var _upload2 = __webpack_require__(69);
 
-__webpack_require__(107);
+__webpack_require__(99);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -8497,183 +8419,13 @@ var uploadModule = exports.uploadModule = _angular2.default.module('upload', [_a
 }).name;
 
 /***/ }),
-/* 59 */
+/* 57 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.authComponent = undefined;
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _auth = __webpack_require__(108);
-
-var _auth2 = _interopRequireDefault(_auth);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var authComponent = exports.authComponent = {
-  templateUrl: _auth2.default,
-  controller: function () {
-    function authComponent() {
-      'ngInject';
-
-      _classCallCheck(this, authComponent);
-    }
-
-    _createClass(authComponent, [{
-      key: 'openModal',
-      value: function openModal(id) {
-        ModalService.Open(id);
-      }
-    }, {
-      key: 'closeModal',
-      value: function closeModal(id) {
-        ModalService.Close(id);
-      }
-    }]);
-
-    return authComponent;
-  }()
-};
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loginComponent = undefined;
-
-var _login = __webpack_require__(109);
-
-var _login2 = _interopRequireDefault(_login);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var loginComponent = exports.loginComponent = {
-  templateUrl: _login2.default,
-  controller: function loginComponent() {
-    'ngInject';
-
-    _classCallCheck(this, loginComponent);
-  }
-};
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.loginModule = undefined;
-
-var _angular = __webpack_require__(3);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _login = __webpack_require__(61);
-
-var _angularUiRouter = __webpack_require__(6);
-
-var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var loginModule = exports.loginModule = _angular2.default.module('login', [_angularUiRouter2.default]).component('login', _login.loginComponent).config(function ($stateProvider, $urlRouterProvider) {
-  $stateProvider.state('login', {
-    url: '/login',
-    component: 'login'
-  });
-  $urlRouterProvider.otherwise('/');
-}).name;
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.registerComponent = undefined;
-
-var _register = __webpack_require__(110);
-
-var _register2 = _interopRequireDefault(_register);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var registerComponent = exports.registerComponent = {
-  templateUrl: _register2.default,
-  controller: function registerComponent() {
-    'ngInject';
-
-    _classCallCheck(this, registerComponent);
-  }
-};
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.registerModule = undefined;
-
-var _angular = __webpack_require__(3);
-
-var _angular2 = _interopRequireDefault(_angular);
-
-var _angularUiRouter = __webpack_require__(6);
-
-var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
-
-var _register = __webpack_require__(63);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var registerModule = exports.registerModule = _angular2.default.module('registerModule', [_angularUiRouter2.default]).component('register', _register.registerComponent).config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
-  $stateProvider.state('register', {
-    url: '/register',
-    component: 'register'
-  });
-  $locationProvider.html5Mode(true);
-  $urlRouterProvider.otherwise('/');
-}).name;
-
-/***/ }),
-/* 65 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8686,7 +8438,7 @@ exports.cartComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _cart = __webpack_require__(111);
+var _cart = __webpack_require__(100);
 
 var _cart2 = _interopRequireDefault(_cart);
 
@@ -8777,7 +8529,6 @@ var cartComponent = exports.cartComponent = {
             buyer_postcode: '123-456'
           }, function (rsp) {
             if (rsp.success) {
-
               jQuery.ajax({
                 url: "/payments/complete", //cross-domain error가 발생하지 않도록 동일한 도메인으로 전송
                 type: 'POST',
@@ -8808,7 +8559,9 @@ var cartComponent = exports.cartComponent = {
 
             alert(msg);
           });
-        }).error(function () {});
+        }).error(function () {
+          throw new Error('kakaopay error');
+        });
       }
     }]);
 
@@ -8817,7 +8570,7 @@ var cartComponent = exports.cartComponent = {
 };
 
 /***/ }),
-/* 66 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8830,7 +8583,7 @@ exports.chartComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _chart = __webpack_require__(112);
+var _chart = __webpack_require__(101);
 
 var _chart2 = _interopRequireDefault(_chart);
 
@@ -8854,7 +8607,6 @@ var chartComponent = exports.chartComponent = {
       key: '$onChanges',
       value: function $onChanges(changes) {
         if (changes.chartData) {
-          console.log('chartComponent:::::', this.chartData);
           this.songsData = Object.assign({}, this.chartData);
           var array = [];
           for (var key in this.songsData) {
@@ -8870,7 +8622,7 @@ var chartComponent = exports.chartComponent = {
 };
 
 /***/ }),
-/* 67 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8900,8 +8652,8 @@ var chartService = exports.chartService = function () {
         url: '/chart',
         method: 'GET'
       };
+
       return this.$http(params).then(function (response) {
-        console.log('chart::::', response.data);
         return response.data;
       });
     }
@@ -8913,7 +8665,7 @@ var chartService = exports.chartService = function () {
 ;
 
 /***/ }),
-/* 68 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -8926,7 +8678,7 @@ exports.discoverComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _discover = __webpack_require__(113);
+var _discover = __webpack_require__(102);
 
 var _discover2 = _interopRequireDefault(_discover);
 
@@ -8971,20 +8723,6 @@ var discoverComponent = exports.discoverComponent = {
           }
         });
       }
-
-      // arrayBufferToBase64(buffer) {
-      //   var binary = '';
-      //   var bytes = new Uint8Array(buffer);
-      //   var length = bytes.byteLength;
-
-      //   for (var i = 0; i < length; i++) {
-      //     binary += String.fromCharCode(bytes[i]);
-      //   }
-      //   var result = window.btoa(binary);
-
-      //   return result;
-      // }
-
     }, {
       key: 'playNg',
       value: function playNg(index) {
@@ -9000,7 +8738,7 @@ var discoverComponent = exports.discoverComponent = {
 };
 
 /***/ }),
-/* 69 */
+/* 62 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9047,36 +8785,7 @@ var discoverService = exports.discoverService = function () {
 ;
 
 /***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.bottomComponent = undefined;
-
-var _bottom = __webpack_require__(114);
-
-var _bottom2 = _interopRequireDefault(_bottom);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-var bottomComponent = exports.bottomComponent = {
-  templateUrl: _bottom2.default,
-  controller: function bottomComponent() {
-    'ngInject';
-
-    _classCallCheck(this, bottomComponent);
-  }
-};
-
-/***/ }),
-/* 71 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9087,7 +8796,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.homeComponent = undefined;
 
-var _home = __webpack_require__(115);
+var _home = __webpack_require__(103);
 
 var _home2 = _interopRequireDefault(_home);
 
@@ -9105,7 +8814,7 @@ var homeComponent = exports.homeComponent = {
 };
 
 /***/ }),
-/* 72 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9116,7 +8825,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.navbarComponent = undefined;
 
-var _navbar = __webpack_require__(116);
+var _navbar = __webpack_require__(104);
 
 var _navbar2 = _interopRequireDefault(_navbar);
 
@@ -9141,11 +8850,6 @@ var navbarComponent = exports.navbarComponent = {
 
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
-
-      console.log('ID: ' + profile.getId());
-      console.log('Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail());
       $scope.onLogin = true;
       $scope.userName = profile.getName();
       $scope.userImg = profile.getImageUrl();
@@ -9159,9 +8863,10 @@ var navbarComponent = exports.navbarComponent = {
       };
 
       $http(params).success(function (data) {
-        console.log('success data', data);
         window.sessionStorage.setItem('accessToken', data.accessToken);
-      }).error(function () {});
+      }).error(function () {
+        throw new Error('Token Error');
+      });
     }
 
     function signOut() {
@@ -9180,20 +8885,20 @@ var navbarComponent = exports.navbarComponent = {
 };
 
 /***/ }),
-/* 73 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 exports.searchComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _search = __webpack_require__(118);
+var _search = __webpack_require__(106);
 
 var _search2 = _interopRequireDefault(_search);
 
@@ -9202,83 +8907,69 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var searchComponent = exports.searchComponent = {
-  bindings: {
-    keyword: '<',
-    searchFile: '&'
-  },
+    bindings: {
+        keyword: '<',
+        searchFile: '&'
+    },
 
-  templateUrl: _search2.default,
+    templateUrl: _search2.default,
 
-  controller: function () {
-    function searchComponent(EventEmitter, searchService, $state) {
-      'ngInject';
+    controller: function () {
+        function searchComponent(EventEmitter, searchService, $state) {
+            'ngInject';
 
-      _classCallCheck(this, searchComponent);
+            _classCallCheck(this, searchComponent);
 
-      this.EventEmitter = EventEmitter;
-      this.searchService = searchService;
-      this.$state = $state;
-    }
-
-    _createClass(searchComponent, [{
-      key: '$oninit',
-      value: function $oninit() {
-        this.keyword = '';
-        this.singleSelect = 'title';
-      }
-    }, {
-      key: '$onChanges',
-      value: function $onChanges(changes) {
-        if (changes.keyword) {
-          this.keyword = angular.copy(this.keyword);
-        }
-        // else if(changes.singleSelect){
-        //       this.singleSelect = angular.copy(this.singleSelect);
-
-        //   }
-      }
-    }, {
-      key: 'onSubmit',
-      value: function onSubmit() {
-        if (!this.keyword) {
-          return;
+            this.EventEmitter = EventEmitter;
+            this.searchService = searchService;
+            this.$state = $state;
         }
 
-        console.log('searchComponent.singleSelect', this.singleSelect);
-        this.searchFile(this.EventEmitter({
-          keyword: this.keyword,
-          selected: 'title' //this.singleSelect
-        }));
-        this.search();
-        // this.getFile()
-      }
-    }, {
-      key: 'search',
-      value: function search() {
-        this.$state.transitionTo('searchResults', {
-          keyword: this.keyword,
-          condition: 'title' //this.singleSelect
+        _createClass(searchComponent, [{
+            key: '$oninit',
+            value: function $oninit() {
+                this.keyword = '';
+                this.singleSelect = 'title';
+            }
         }, {
-          reload: true,
-          notify: true
-        });
-      }
+            key: '$onChanges',
+            value: function $onChanges(changes) {
+                if (changes.keyword) {
+                    this.keyword = angular.copy(this.keyword);
+                }
+            }
+        }, {
+            key: 'onSubmit',
+            value: function onSubmit() {
+                if (!this.keyword) {
+                    return;
+                }
 
-      // getFile(){
-      //        this.searchService.searchSong(this.keyword, this.singleSelect)
-      //            .then(response => this.searchs = response)
-      //    }
+                this.searchFile(this.EventEmitter({
+                    keyword: this.keyword,
+                    selected: 'title'
+                }));
+                this.search();
+            }
+        }, {
+            key: 'search',
+            value: function search() {
+                this.$state.transitionTo('searchResults', {
+                    keyword: this.keyword,
+                    condition: 'title'
+                }, {
+                    reload: true,
+                    notify: true
+                });
+            }
+        }]);
 
-
-    }]);
-
-    return searchComponent;
-  }()
-
+        return searchComponent;
+    }()
 };
 
 /***/ }),
-/* 74 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9289,98 +8980,99 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.searchResultComponent = undefined;
 
-var _searchResult = __webpack_require__(119);
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _searchResult = __webpack_require__(107);
 
 var _searchResult2 = _interopRequireDefault(_searchResult);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// export const searchResultComponent = {
-//   templateUrl,
-//   controller: class searchResultComponent {
-//     constructor($http, searchService, $stateParams, $state){
-//       this.$http = $http;
-//       this.searchService = searchService;
-//       this.$stateParams = $stateParams;
-//       this.keyword = this.$stateParams.keyword;
-//       this.imgObj = {
-//         "width": "150px",
-//         "margin-top": "20px",
-//         "margin-right": "20px"
-//       };
-//       this.searchService.searchSong(this.keyword, 'title')
-//         .then(response => this.searchs = response)
-//     }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-//     playNg(index){
-//       var idx = index.toString();
-//       var audio = document.getElementById(idx);
-//       audio.load();
-//       audio.play();
-//     }
-
-//     sendCart(title, artist, album, price){
-//       return this.$http({
-//         method: 'GET',
-//         url: '/cart/:item',
-//         params: { 'title': title, 'artist': artist, 'album': album, 'price': price }
-//       });
-//     }
-
-
-//   }
-// }
 var searchResultComponent = exports.searchResultComponent = {
   templateUrl: _searchResult2.default,
-  controller: resultCtrl
+  controller: function () {
+    function SearchResultComponent(searchService, $stateParams, $http) {
+      var _this = this;
+
+      _classCallCheck(this, SearchResultComponent);
+
+      this.$http = $http;
+      this.searchService = searchService;
+      this.$stateParams = $stateParams;
+      this.keyword = this.$stateParams.keyword;
+      this.searchService.searchSong(this.keyword, 'title').then(function (response) {
+        return _this.searchs = response;
+      });
+      this.imgObj = {
+        "width": "150px",
+        "margin-top": "20px",
+        "margin-right": "20px",
+        "margin-left": "20px"
+      };
+    }
+
+    _createClass(SearchResultComponent, [{
+      key: 'playNg',
+      value: function playNg(index) {
+        var idx = index.toString();
+        var audio = document.getElementById(idx);
+        audio.load();
+        audio.play();
+      }
+    }, {
+      key: 'sendCart',
+      value: function sendCart(title, artist, album, price) {
+        return this.$http({
+          method: 'GET',
+          url: '/cart/:item',
+          params: {
+            'title': title,
+            'artist': artist,
+            'album': album,
+            'price': price
+          }
+        });
+      }
+    }]);
+
+    return SearchResultComponent;
+  }()
 };
 
-function resultCtrl($scope, $stateParams, searchService, $http) {
-  $scope.keyword = $stateParams.keyword;
-  console.log('stateParams', $stateParams);
+// function resultCtrl($scope, $stateParams, searchService, $http){ 
+//   $scope.keyword = $stateParams.keyword;
 
-  searchService.searchSong($scope.keyword, 'title').then(function (response) {
-    $scope.searchs = response;
-    console.log('resultCtrl', $scope.searchs);
-  });
+//   searchService.searchSong($scope.keyword, 'title')
+//     .then(response => {$scope.searchs = response
+//     });
 
-  $scope.arrayBufferToBase64 = function (buffer) {
-    var binary = '';
-    var bytes = new Uint8Array(buffer);
-    var length = bytes.byteLength;
-    for (var i = 0; i < length; i++) {
-      binary += String.fromCharCode(bytes[i]);
-    }
-    var result = window.btoa(binary);
+//   $scope.imgObj = {
+//     "width" : "150px",
+//     "margin-top" : '20px',
+//     "margin-right" : '20px',
+//     "margin-left": '20px'
+//   };
 
-    return result;
-  };
+//   $scope.playNg = function(index){
+//     var idx = index.toString();
+//     var audio = document.getElementById(idx);
+//     audio.load();
+//     audio.play();
+//   };
 
-  $scope.imgObj = {
-    "width": "150px",
-    "margin-top": '20px',
-    "margin-right": '20px',
-    "margin-left": '20px'
-  };
-
-  $scope.playNg = function (index) {
-    var idx = index.toString();
-    var audio = document.getElementById(idx);
-    audio.load();
-    audio.play();
-  };
-
-  $scope.sendCart = function (title, artist, album, price) {
-    return $http({
-      method: 'GET',
-      url: '/cart/:item',
-      params: { 'title': title, 'artist': artist, 'album': album, 'price': price }
-    });
-  };
-}
+//   $scope.sendCart = function(title, artist, album, price){
+//     return $http({
+//       method: 'GET',
+//       url: '/cart/:item',
+//       params: {'title' : title, 'artist': artist, 'album': album, 'price': price }
+//     });
+//   };
+// }
 
 /***/ }),
-/* 75 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9391,17 +9083,17 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.searchResultModule = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _searchResult = __webpack_require__(74);
+var _searchResult = __webpack_require__(66);
 
 var _search = __webpack_require__(29);
 
-__webpack_require__(106);
+__webpack_require__(98);
 
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
@@ -9419,7 +9111,7 @@ var searchResultModule = exports.searchResultModule = _angular2.default.module('
 }).name;
 
 /***/ }),
-/* 76 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9432,7 +9124,7 @@ exports.uploadComponent = undefined;
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var _upload = __webpack_require__(120);
+var _upload = __webpack_require__(108);
 
 var _upload2 = _interopRequireDefault(_upload);
 
@@ -9494,11 +9186,12 @@ var uploadComponent = exports.uploadComponent = {
         var _this = this;
 
         var files = document.getElementById('fff').files;
-
         this.song = files;
+
         if (!this.song) {
           return;
         }
+
         this.progress = true;
         this.uploadService.insertSong(this.song).then(function (res) {
           if (res.data.message === 'success upload!') {
@@ -9507,19 +9200,6 @@ var uploadComponent = exports.uploadComponent = {
           }
         });
       }
-
-      // uploadFile(element){
-      //     console.log('element', element.files)
-      // }
-
-
-      // f(){
-      //    var photo = document.getElementById('photo');
-      //    var fol = photo.files[0];
-      //    console.log('fol', fol) 
-      // }
-
-
     }]);
 
     return uploadComponent;
@@ -9527,14 +9207,14 @@ var uploadComponent = exports.uploadComponent = {
 };
 
 /***/ }),
-/* 77 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
 Object.defineProperty(exports, "__esModule", {
-  value: true
+    value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -9542,48 +9222,52 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var uploadService = exports.uploadService = function () {
-  function uploadService($http) {
-    'ngInject';
+    function uploadService($http) {
+        'ngInject';
 
-    _classCallCheck(this, uploadService);
+        _classCallCheck(this, uploadService);
 
-    this.$http = $http;
-  }
-
-  _createClass(uploadService, [{
-    key: 'insertSong',
-    value: function insertSong(files) {
-      var fileData = new FormData();
-      for (var obj in files) {
-        fileData.append('userfile', files[obj]);
-        fileData.append('name', files[obj]);
-      }
-
-      this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
-      return this.$http.post('/upload', fileData, {
-        transformRequest: angular.identity,
-        headers: { 'Content-Type': undefined }
-      }).success(function (res) {
-        return res;
-      }).error(function () {});
+        this.$http = $http;
     }
-  }, {
-    key: 'getUploadedSongList',
-    value: function getUploadedSongList() {
-      this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
-      return this.$http.get('/getUploadedSongList').success(function (res) {
-        return res;
-      }).error(function () {});
-    }
-  }]);
 
-  return uploadService;
+    _createClass(uploadService, [{
+        key: 'insertSong',
+        value: function insertSong(files) {
+            var fileData = new FormData();
+            for (var obj in files) {
+                fileData.append('userfile', files[obj]);
+                fileData.append('name', files[obj]);
+            }
+
+            this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
+            return this.$http.post('/upload', fileData, {
+                transformRequest: angular.identity,
+                headers: { 'Content-Type': undefined }
+            }).success(function (response) {
+                return response;
+            }).error(function () {
+                throw new Error('upload Error');
+            });
+        }
+    }, {
+        key: 'getUploadedSongList',
+        value: function getUploadedSongList() {
+            this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
+            return this.$http.get('/getUploadedSongList').success(function (response) {
+                return response;
+            }).error(function () {
+                throw new Error('upload Error');
+            });
+        }
+    }]);
+
+    return uploadService;
 }();
 
 ;
 
 /***/ }),
-/* 78 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -9599,7 +9283,7 @@ var uploadService = exports.uploadService = function () {
  */ /** for typedoc */
 
 var angular_1 = __webpack_require__(9);
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 /** @hidden */
 function parseStateRef(ref) {
     var paramsOnly = ref.match(/^\s*({[^}]*})\s*$/),
@@ -10119,7 +9803,7 @@ angular_1.ng.module('ui.router.state').directive('uiSref', uiSref).directive('ui
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 79 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10130,8 +9814,8 @@ angular_1.ng.module('ui.router.state').directive('uiSref', uiSref).directive('ui
  */ /** for typedoc */
 
 var angular_1 = __webpack_require__(9);
-var angular_2 = __webpack_require__(3);
-var ui_router_core_1 = __webpack_require__(5);
+var angular_2 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(22);
 var services_1 = __webpack_require__(21);
 /**
@@ -10533,7 +10217,7 @@ angular_1.ng.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 80 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -10897,13 +10581,13 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 81 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 /**
  * Implements UI-Router LocationServices and LocationConfig using Angular 1's $location service
  */
@@ -10987,7 +10671,7 @@ exports.Ng1LocationServices = Ng1LocationServices;
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 82 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11035,14 +10719,14 @@ angular_1.ng.module('ui.router.state').filter('isState', $IsStateFilter).filter(
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 83 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /** @module ng1 */ /** */
 
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 var services_1 = __webpack_require__(21);
 /**
  * This is a [[StateBuilder.builder]] function for angular1 `onEnter`, `onExit`,
@@ -11066,7 +10750,7 @@ exports.getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 84 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11075,7 +10759,7 @@ exports.getStateHookBuilder = function (hookName) {
 /** for typedoc */
 
 var angular_1 = __webpack_require__(9);
-var ui_router_core_1 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
 /**
  * Service which manages loading of templates from a ViewConfig.
  */
@@ -11263,15 +10947,15 @@ var scopeBindings = function scopeBindings(bindingsObj) {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 85 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 /** @module url */ /** */
 
-var ui_router_core_1 = __webpack_require__(5);
-var ui_router_core_2 = __webpack_require__(5);
+var ui_router_core_1 = __webpack_require__(4);
+var ui_router_core_2 = __webpack_require__(4);
 /**
  * Manages rules for client-side URL
  *
@@ -11471,7 +11155,7 @@ exports.UrlRouterProvider = UrlRouterProvider;
 //# sourceMappingURL=urlRouterProvider.js.map
 
 /***/ }),
-/* 86 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -11500,7 +11184,7 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 87 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28474,7 +28158,7 @@ if(window.console){console.log('WARNING: Tried to load angular more than once.')
 bindJQuery();publishExternalAPI(angular);angular.module("ngLocale",[],["$provide",function($provide){var PLURAL_CATEGORY={ZERO:"zero",ONE:"one",TWO:"two",FEW:"few",MANY:"many",OTHER:"other"};function getDecimals(n){n=n+'';var i=n.indexOf('.');return i==-1?0:n.length-i-1;}function getVF(n,opt_precision){var v=opt_precision;if(undefined===v){v=Math.min(getDecimals(n),3);}var base=Math.pow(10,v);var f=(n*base|0)%base;return{v:v,f:f};}$provide.value("$locale",{"DATETIME_FORMATS":{"AMPMS":["AM","PM"],"DAY":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"ERANAMES":["Before Christ","Anno Domini"],"ERAS":["BC","AD"],"FIRSTDAYOFWEEK":6,"MONTH":["January","February","March","April","May","June","July","August","September","October","November","December"],"SHORTDAY":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"SHORTMONTH":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"STANDALONEMONTH":["January","February","March","April","May","June","July","August","September","October","November","December"],"WEEKENDRANGE":[5,6],"fullDate":"EEEE, MMMM d, y","longDate":"MMMM d, y","medium":"MMM d, y h:mm:ss a","mediumDate":"MMM d, y","mediumTime":"h:mm:ss a","short":"M/d/yy h:mm a","shortDate":"M/d/yy","shortTime":"h:mm a"},"NUMBER_FORMATS":{"CURRENCY_SYM":"$","DECIMAL_SEP":".","GROUP_SEP":",","PATTERNS":[{"gSize":3,"lgSize":3,"maxFrac":3,"minFrac":0,"minInt":1,"negPre":"-","negSuf":"","posPre":"","posSuf":""},{"gSize":3,"lgSize":3,"maxFrac":2,"minFrac":2,"minInt":1,"negPre":'-\xA4',"negSuf":"","posPre":'\xA4',"posSuf":""}]},"id":"en-us","localeID":"en_US","pluralCat":function pluralCat(n,opt_precision){var i=n|0;var vf=getVF(n,opt_precision);if(i==1&&vf.v==0){return PLURAL_CATEGORY.ONE;}return PLURAL_CATEGORY.OTHER;}});}]);jqLite(window.document).ready(function(){angularInit(window.document,bootstrap);});})(window);!window.angular.$$csp().noInlineStyle&&window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 88 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28487,17 +28171,17 @@ function __export(m) {
 }
 /** @module common */ /** for typedoc */
 __export(__webpack_require__(0));
-__export(__webpack_require__(4));
+__export(__webpack_require__(3));
 __export(__webpack_require__(16));
 __export(__webpack_require__(2));
 __export(__webpack_require__(1));
 __export(__webpack_require__(23));
-__export(__webpack_require__(7));
+__export(__webpack_require__(6));
 __export(__webpack_require__(10));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 89 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28565,7 +28249,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 90 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28573,7 +28257,7 @@ exports.registerOnEnterHook = function (transitionService) {
 /** @module hooks */ /** */
 
 var predicates_1 = __webpack_require__(1);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 var targetState_1 = __webpack_require__(8);
 /**
  * A [[TransitionHookFn]] that redirects to a different state or params
@@ -28605,7 +28289,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 91 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28648,7 +28332,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 92 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28679,7 +28363,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 93 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28687,7 +28371,7 @@ exports.registerUpdateUrl = function (transitionService) {
 /** @module hooks */ /** for typedoc */
 
 var common_1 = __webpack_require__(0);
-var coreservices_1 = __webpack_require__(4);
+var coreservices_1 = __webpack_require__(3);
 /**
  * A [[TransitionHookFn]] which waits for the views to load
  *
@@ -28736,7 +28420,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 94 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28761,7 +28445,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 95 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28779,7 +28463,7 @@ __export(__webpack_require__(24));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 96 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28796,7 +28480,7 @@ __export(__webpack_require__(18));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 97 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28814,7 +28498,7 @@ __export(__webpack_require__(19));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 98 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28835,7 +28519,7 @@ __export(__webpack_require__(8));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 99 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28869,7 +28553,7 @@ __export(__webpack_require__(28));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 100 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28888,7 +28572,7 @@ __export(__webpack_require__(47));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 101 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -28903,79 +28587,52 @@ __export(__webpack_require__(48));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 102 */
+/* 94 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 103 */
+/* 95 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 104 */
+/* 96 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 105 */
+/* 97 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 106 */
+/* 98 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 107 */
+/* 99 */
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
-/* 108 */
-/***/ (function(module, exports) {
-
-var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/auth.html';
-var html = "\n\t\n\t<login>\n\t</login>\n\n\n\n\n";
-window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
-module.exports = path;
-
-/***/ }),
-/* 109 */
-/***/ (function(module, exports) {
-
-var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/login/login.html';
-var html = "\n<h1>LOGIN</h1>\n<form name=\"authForm\" novalidate ng-submit=\"$ctrl.submitForm()\">\n  <div class=\"row\">\n    <div class=\"input-field col s6\">\n      <label>Email</label>\n      <input type=\"email\" name=\"email\" required ng-model=\"$ctrl.user.email\">\n    </div>\n  </div>\n  <div class=\"row\">\n    <div class=\"input-field col s6\">\n      <label>password</label>\n      <input required name=\"password\" ng-model=\"$ctrl.user.password\" type=\"password\">  \n    </div>\n  </div>\n  <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Submit\n  <i class=\"material-icons right\">send</i>\n  </button>\n</form>\n\n<a ui-sref=\"register\">회원이 아니세요? 회원가입하세요!</a>\n\n<form method=\"get\" action=\"/auth/google\">\n  <button type=\"submit\" class=\"btn waves-effect waves-light\"><i class=\"material-icons right\">perm_identity</i> GOOGLE AUTH</button>\n</form>\n  \n\n\n\n\n\n<!-- <h1>Login</h1>\n<form name=\"authForm\" novalidate ng-submit=\"$ctrl.submitForm()\">\n    <p>\n        E-mail\n            <input type=\"email\" name=\"email\" required=\"required\" placeholder=\"Enter your email\" ng-model=\"$ctrl.user.email\">\n        \n    <p>\n    <p>\n        Password\n            <input type=\"password\" name=\"password\" required=\"required\" placeholder=\"Enter your password\" ng-model=\"$ctrl.user.password\">\n    </p>\n    <div class=\"auth-button\">\n        <button type=\"submit\" ng-disabled=\"authForm.$invalid\">\n           로그인\n        </button>\n    </div>\n</form>\n    <p>\n<form method=\"get\" action=\"/auth/google\">\n    <input type=\"submit\" value=\"google auth\">\n</form>\n    </p>\n    <a ui-sref=\"register\">\n    회원이 아니세요? 회원가입하세요!\n    </a>\n\n\n -->";
-window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
-module.exports = path;
-
-/***/ }),
-/* 110 */
-/***/ (function(module, exports) {
-
-var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/auth/register/register.html';
-var html = "<h1>REGISTER</h1>\n\n<form name=\"registerForm\" novalidate ng-submit=\"$ctrl.submitInfo()\">\n\t\t<label>E-mail</label>\n\t\t\t<input type=\"email\" name=\"email\" required=\"required\" placeholder=\"Enter your email\" ng-model=\"$ctrl.user.email\">\n\n\t\t<label>Password</label>\n\t\t\t<input type=\"password\" name=\"password\" required=\"required\" placeholder=\"Enter your password\" ng-model=\"$ctrl.user.password\">\n\t\t<div class=\"auth-button\">\n\t\t\t<button type=\"submit\" ng-disabled=\"authForm.$invalid\">\n\t\t\t\t회원가입\n\t\t\t</button>\n\t</div>\n</form>\n\n<a ui-sref=\"login\">이미 회원이시면 로그인해주세요.</a>";
-window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
-module.exports = path;
-
-/***/ }),
-/* 111 */
+/* 100 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/cart/cart.html';
-var html = "\n<h3>CART</h3>\n\n<div ng-if=\"!$ctrl.cartObj.data.length\">장바구니가 비어있습니다</div>\n<div>\n  <table class=\"highlight\">\n    <thead>\n      <tr>\n        <th>check</th>\n        <th>title</th>\n        <th>artist</th>\n        <th>album</th>\n        <th>price</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr ng-repeat=\"item in $ctrl.cartObj.data\">\n        <td>\n          <input type=\"checkbox\" id=\"test5{{$index}}\" ng-value=\"{{$index}}\" ng-click=\"$ctrl.cb_change($event, item.title)\"/>\n          <label for=\"test5{{$index}}\"> </label>\n        </td>\n        <td>{{item.title}}</td>\n        <td>{{item.artist}}</td>\n        <td>{{item.album}}</td>\n        <td>{{item.price}}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<div class=\"right\">\n  <h5>order total : {{$ctrl.checkbox.length * 1000}} won</h5>\n  <p>\n    <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\" ng-click=\"$ctrl.cb_delete()\">DELETE\n      <i class=\"material-icons right\"></i>\n    </button>\n    <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\" ng-click=\"$ctrl.kakaopay($ctrl.checkbox)\">BUY\n      <i class=\"material-icons right\"></i>\n    </button>\n  </p>\n</div>\n\n\n";
+var html = "<div class=\"titlebg\">\n  <h3><span class=\"glyphicon glyphicon-shopping-cart\"></span> CART</h3>\n</div>\n\n<div ng-if=\"!$ctrl.cartObj.data.length\">장바구니가 비어있습니다</div>\n<div>\n  <table class=\"highlight\">\n    <thead>\n      <tr>\n        <th>check</th>\n        <th>title</th>\n        <th>artist</th>\n        <th>album</th>\n        <th>price</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr ng-repeat=\"item in $ctrl.cartObj.data\">\n        <td>\n          <input type=\"checkbox\" id=\"test5{{$index}}\" ng-value=\"{{$index}}\" ng-click=\"$ctrl.cb_change($event, item.title)\"/>\n          <label for=\"test5{{$index}}\"> </label>\n        </td>\n        <td>{{item.title}}</td>\n        <td>{{item.artist}}</td>\n        <td>{{item.album}}</td>\n        <td>{{item.price}}</td>\n      </tr>\n    </tbody>\n  </table>\n</div>\n\n<div class=\"right\">\n  <h5>order total : {{$ctrl.checkbox.length * 1000}} won</h5>\n  <p>\n    <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\" ng-click=\"$ctrl.cb_delete()\">DELETE\n      <i class=\"material-icons right\"></i>\n    </button>\n    <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\" ng-click=\"$ctrl.kakaopay($ctrl.checkbox)\">BUY\n      <i class=\"material-icons right\"></i>\n    </button>\n  </p>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 112 */
+/* 101 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/chart/chart.html';
@@ -28984,43 +28641,34 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 113 */
+/* 102 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/discover/discover.html';
-var html = "<div class=\"titlebg\">\n  <h3>DISCOVER</h3>\n</div>\n<div class=\"discovercwrap\">\n\n<div class=\"polaroid\" ng-repeat=\"song in $ctrl.albumData\">\n<div class=\"container\">\n  <img ng-src=\"{{song.picture}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\">\n  <div class=\"middle\">\n    <audio id=\"{{$index}}\" ng-src=\"{{song.filename}}\"></audio>\n    <div class=\"text valign-wrapper\">\n      <a href=\"#\" ng-click=\"$ctrl.playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle waves-effect valign\"></span>\n      </a>\n      \n    </div>\n    <div class=\"right rb\">\n      <a class=\"waves-effect waves-circle waves-light btn-floating secondary-content\" ng-click=\"$ctrl.countGood(song.title)\"><span class=\"glyphicon glyphicon-plus\"></span></a>\n    </div>\n  </div>\n</div>\n  <div class=\"content\">\n    <p>\n    {{song.album}}\n    </p>\n  </div>\n</div>\n</div>\n\n<!-- <div ng-repeat=\"song in $ctrl.albumData\">\n<a class=\"lightbox\" href=\"#{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n</a> \n<div class=\"lightbox-target\" id=\"{{song.title}}\">\n   <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}\"/>\n   <a class=\"lightbox-close\" href=\"#\"></a>\n</div>\n</div> -->\n\n<!-- <img ng-src=\"data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture.data.data)}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\"> -->\n";
+var html = "<div class=\"titlebg\">\n  <h3>DISCOVER</h3>\n</div>\n<div class=\"discovercwrap\">\n\n<div class=\"polaroid\" ng-repeat=\"song in $ctrl.albumData\">\n<div class=\"container\">\n  <img ng-src=\"{{song.picture}}\" alt=\"Avatar\" class=\"image\" style=\"width:100%\">\n  <div class=\"middle\">\n    <audio id=\"{{$index}}\" ng-src=\"{{song.filename}}\"></audio>\n    <div class=\"text valign-wrapper\">\n      <a href=\"#\" ng-click=\"$ctrl.playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle waves-effect valign\"></span>\n      </a>     \n    </div>\n    <div class=\"right rb\">\n      <a class=\"waves-effect waves-circle waves-light btn-floating secondary-content\" ng-click=\"$ctrl.countGood(song.title)\"><span class=\"glyphicon glyphicon-plus\"></span></a>\n    </div>\n  </div>\n</div>\n  <div class=\"content\">\n    <p>\n    {{song.album}}\n    </p>\n  </div>\n</div>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 114 */
-/***/ (function(module, exports) {
-
-var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/footer/bottom.html';
-var html = "<footer class=\"page-footer green darken-3\">\n  <div class=\"container\">\n    <div class=\"row\">\n      <div class=\"col l6 s12\">\n        <h5 class=\"white-text\">MusicTracks</h5>\n        <p class=\"grey-text text-lighten-4\">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed nibh sed nibh gravida porta. Fusce sollicitudin pellentesque enim, in pellentesque eros vulputate et. </p>\n      </div>\n      \n    </div>\n  </div>\n  <div class=\"footer-copyright\">\n    <div class=\"container\">\n    Made by <a class=\"brown-text text-lighten-3\" href=\"#\">Song-ei, yoon</a>\n    </div>\n  </div>\n</footer>";
-window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
-module.exports = path;
-
-/***/ }),
-/* 115 */
+/* 103 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/home/home.html';
-var html = "<div id=\"index-banner\" class=\"parallax-container\">\n  <div class=\"section no-pad-bot\">\n    <div class=\"container\">\n      <br><br>\n      <h1 class=\"header center white-text text-lighten-2\">Welcome to MusicTracks</h1>\n      <div class=\"row center\">\n        <h5 class=\"header col s12 light\" style=\"color:white\">Music site for everyone</h5>\n      </div>\n      <div class=\"row center\">\n        <a href=\"#\" id=\"download-button\" class=\"btn-large waves-effect waves-light white lighten-1\" style=\"color:black\">Get Started</a>\n      </div>\n      <br><br>\n\n    </div>\n  </div>\n  <div class=\"parallax\">\n    <img src=\"https://s3.ap-northeast-2.amazonaws.com/test-uphere/mainimg.jpg\" style=\"width: 100%;height:auto;display:block\"/>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"section\">\n    <!--   Icon Section   -->\n    <div class=\"row\">\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-music\"></span></h2>\n          <h5 class=\"center\">Speeds up development</h5>\n\n          <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-cloud\"></span></h2>\n          <h5 class=\"center\">User Experience Focused</h5>\n\n          <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-glass\"></span></h2>\n          <h5 class=\"center\">Easy to work with</h5>\n\n          <p class=\"light\">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n";
+var html = "<div id=\"index-banner\" class=\"parallax-container\">\n  <div class=\"section no-pad-bot\">\n    <div class=\"container\">\n      <br><br>\n      <h1 class=\"header center white-text text-lighten-2\">Welcome to MusicTracks</h1>\n      <div class=\"row center\">\n        <h5 class=\"header col s12 light\" style=\"color:white\">Music site for everyone</h5>\n      </div>\n      <div class=\"row center\">\n        <a href=\"#\" id=\"download-button\" class=\"btn-large waves-effect waves-light white lighten-1\" style=\"color:black\">Get Started</a>\n      </div>\n      <br><br>\n\n    </div>\n  </div>\n  <div class=\"parallax\">\n    <img src=\"https://s3.ap-northeast-2.amazonaws.com/test-uphere/mainimg.jpg\" style=\"width: 100%;height:auto;display:block\"/>\n  </div>\n</div>\n\n<div class=\"container\">\n  <div class=\"section\">\n    <div class=\"row\">\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-music\"></span></h2>\n          <h5 class=\"center\">Speeds up development</h5>\n          <p class=\"light\">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-cloud\"></span></h2>\n          <h5 class=\"center\">User Experience Focused</h5>\n          <p class=\"light\">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>\n        </div>\n      </div>\n\n      <div class=\"col s4\">\n        <div class=\"icon-block\">\n          <h2 class=\"center brown-text\"><span class=\"glyphicon glyphicon-glass\"></span></h2>\n          <h5 class=\"center\">Easy to work with</h5>\n          <p class=\"light\">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n\n\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 116 */
+/* 104 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/nav/navbar.html';
-var html = "<nav class=\"grey darken-4\">\n  <div class=\"nav-wrapper\">\n    <div class=\"row\">\n      <a href=\"/\" class=\"brand-logo center\">MUSICTRACKS</a>\n      <div class=\"col s2\">\n        <search></search>\n      </div>\n      <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>\n      <ul id=\"nav-mobile\" class=\"left hide-on-med-and-down\">\n        <li><a ui-sref=\"main\">HOME</a></li>\n        <li><a ui-sref=\"discover\">DISCOVER</a></li>\n        <li><a ui-sref=\"chart\">CHART</a></li>\n      </ul>\n      <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">\n        <li><a ui-sref=\"upload\">UPLOAD</a></li>\n        <li><a ui-sref=\"cart\">CART</a></li>\n        <li><a id=\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li>\n        <li ng-if=\"!onLogin\">\n          <div class=\"g-signin2 btn btn-info btn-lg\" data-onsuccess=\"onSignIn\"></div>\n        </li>\n        <li ng-if=\"onLogin\">  \n          <img ng-src=\"{{userImg}}\" ng-style=\"profileStyle\"/>\n          <span ng-style=\"nameStyle\">{{userName}}</span>\n        </li>\n      </ul>\n        <!-- <div class=\"right\">\n          <a class=\"dropdown-button\" href=\"#\" data-activates=\"dropdown1\" ng-if=\"onLogin\">\n            Dropdown\n          <span class=\"glyphicon glyphicon-triangle-bottom\"></span>\n          </a>\n        </div> -->\n        <!-- </li> -->\n      <!-- </ul> -->\n    </div>\n  </div>\n</nav>\n\n<ul id=\"dropdown1\" class=\"dropdown-content\">\n  <li><a ui-sref=\"upload\">UPLOAD</a></li>\n  <li><a ui-sref=\"cart\">CART</a></li>\n  <li class=\"divider\"></li>\n  <li><a id =\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li>\n</ul>\n";
+var html = "<nav class=\"grey darken-4\">\n  <div class=\"nav-wrapper\">\n    <div class=\"row\">\n      <a href=\"/\" class=\"brand-logo center\">MUSICTRACKS</a>\n      <div class=\"col s2\">\n        <search></search>\n      </div>\n      <a href=\"#\" data-activates=\"mobile-demo\" class=\"button-collapse\"><i class=\"material-icons\">menu</i></a>\n      <ul id=\"nav-mobile\" class=\"left hide-on-med-and-down\">\n        <li><a ui-sref=\"main\">HOME</a></li>\n        <li><a ui-sref=\"discover\">DISCOVER</a></li>\n        <li><a ui-sref=\"chart\">CHART</a></li>\n      </ul>\n      <ul id=\"nav-mobile\" class=\"right hide-on-med-and-down\">\n        <li ng-if=\"!onLogin\">\n          <div class=\"g-signin2 btn btn-info btn-lg\" data-onsuccess=\"onSignIn\"></div>\n        </li>\n        <li ng-if=\"onLogin\">  \n          <img ng-src=\"{{userImg}}\" ng-style=\"profileStyle\"/>\n          <span ng-style=\"nameStyle\">{{userName}}</span>\n        </li>\n        <li>\n        <div class=\"right\">\n          <a class=\"dropdown-button\" href=\"#\" data-activates=\"dropdown1\" ng-if=\"onLogin\">\n            Dropdown\n          <span class=\"glyphicon glyphicon-triangle-bottom\"></span>\n          </a>\n        </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</nav>\n\n<ul id=\"dropdown1\" class=\"dropdown-content\">\n  <li><a ui-sref=\"upload\">UPLOAD</a></li>\n  <li><a ui-sref=\"cart\">CART</a></li>\n  <li class=\"divider\"></li>\n  <li><a id =\"signout\" href=\"#\" onclick=\"signOut()\">LOGOUT</a></li>\n</ul>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 117 */
+/* 105 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/root.html';
@@ -29029,34 +28677,34 @@ window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, htm
 module.exports = path;
 
 /***/ }),
-/* 118 */
+/* 106 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/search/search.html';
-var html = "<form name=\"toSearch\" ng-submit=\"$ctrl.onSubmit()\" ui-sref=\"searchSong\">\n<div class=\"input-field\">\n<!--   <select name=\"singleSelect\" ng-model=\"$ctrl.singleSelect\">\n    <option value=\"\" disabled selected>Choose your option</option>\n    <option value=\"title\">title</option>\n    <option value=\"artist\">artist</option>\n    <option value=\"album\">album</option>\n  </select> -->\n</div>\n  <div class=\"input-field\">\n    <input id=\"search\" type=\"search\" ng-model=\"$ctrl.keyword\" placeholder=\"Search song...\" required>\n    <label class=\"label-icon\" for=\"search\"><span class=\"glyphicon glyphicon-search\"></span></label>\n  </div>\n</form>\n  <!-- <select name=\"singleSelect\" ng-model=\"$ctrl.singleSelect\">\n    <option value=\"title\">title</option>\n    <option value=\"artist\">artist</option>\n    <option value=\"album\">album</option>\n  </select> -->";
+var html = "<form name=\"toSearch\" ng-submit=\"$ctrl.onSubmit()\" ui-sref=\"searchSong\">\n  <div class=\"input-field\">\n    <input id=\"search\" type=\"search\" ng-model=\"$ctrl.keyword\" placeholder=\"Search song...\" required>\n    <label class=\"label-icon\" for=\"search\"><span class=\"glyphicon glyphicon-search\"></span></label>\n  </div>\n</form>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 119 */
+/* 107 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/search/searchResult.html';
-var html = "<div class=\"titlebg\">\n  <h3><span class=\"glyphicon glyphicon-search\"></span> Search Results {{ keyword }}</h3>\n</div>\n\n<h5>\n  {{ searchs.length }} tracks matching \"{{ keyword }}\"\n</h5>\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"imgObj\">\n    <span class=\"title\">{{song.title}}\n       / {{song.artist}} / album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </span>\n    \n\n    <div class=\"secondary-content\">\n      <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>  \n    </div>\n    \n    <a href=\"#!\" class=\"secondary-content\"><span class=\"glyphicon glyphicon-star\"></span></a>\n  </li>\n</ul>\n";
+var html = "<div class=\"titlebg\">\n  <h3><span class=\"glyphicon glyphicon-search\"></span> Search Results {{ $ctrl.keyword }}</h3>\n</div>\n\n<h5>\n  {{ $ctrl.searchs.length }} tracks matching \"{{ $ctrl.keyword }}\"\n</h5>\n\n<ul class=\"collection\">\n  <li class=\"collection-item avatar\" ng-repeat=\"song in $ctrl.searchs\">\n    <img ng-src=\"{{song.picture}}\" ng-style=\"$ctrl.imgObj\">\n    <span class=\"title\">{{song.title}}\n       / {{song.artist}} / album : {{song.album}} / price : {{ song.price }} / year : {{ song.year }}\n    </span>\n    <div class=\"secondary-content\">\n      <audio id=\"{{$index}}\" src=\"{{song.filename}}\"></audio>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"$ctrl.playNg($index)\">\n        <span class=\"glyphicon glyphicon-play-circle\"></span> Play\n      </a>\n      <a href=\"#\" class=\"btn btn-info btn-lg\" ng-click=\"$ctrl.sendCart(song.title, song.artist, song.album, song.price)\">\n        <span class=\"glyphicon glyphicon-shopping-cart\"></span> Shopping Cart\n      </a>  \n    </div>\n    \n    <a href=\"#!\" class=\"secondary-content\"><span class=\"glyphicon glyphicon-star\"></span></a>\n  </li>\n</ul>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 120 */
+/* 108 */
 /***/ (function(module, exports) {
 
 var path = '/Users/yunsong-i/Desktop/MusicTracks/client/app/upload.html';
-var html = "<div class=\"progress\" ng-if=\"$ctrl.progress\">\n  <div class=\"indeterminate\"></div>\n</div>\n<div class=\"alert success\" ng-if=\"$ctrl.alert\">\n  <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> \n  <strong>Success!</strong> Indicates a successful or positive action.\n</div>\n<h3>음반 업로드</h3>\n\n\n<div>\n  <div class=\"left\">\n    <form method=\"post\" enctype=\"multipart/form-data\" ng-submit=\"$ctrl.onSubmit($event)\">\n      <div class=\"file-field input-field\">\n      <div class=\"btn\">\n        <span>File</span>\n        <input type=\"file\" id=\"fff\" name=\"userfile\" multiple required />\n      </div>\n      <div class=\"file-path-wrapper\">\n        <input class=\"file-path validate\" type=\"text\" placeholder=\"Upload one or more files\">\n      </div>\n      </div>\n      <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Upload\n        <i class=\"material-icons right\">send</i>\n      </button>\n    </form>\n  </div>\n  <div class=\"right divider\">\n      <h3 class=\"center-align\">uploaded list</h3>\n    <div>\n      <table>\n          <thead>\n            <tr>\n              <th></th>\n              <th>Title</th>\n              <th>Artist</th>\n              <th>Album</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr ng-repeat=\"song in $ctrl.fileData\">\n              <td><img ng-src=\"{{song.picture}}\" class=\"circle responsive-img\" ng-style=\"$ctrl.imgObj\"/></td>\n              <td>{{song.title}}</td>\n              <td>{{song.artist}}</td>\n              <td>{{song.album}}</td>\n            </tr>\n          </tbody>\n        </table>\n    </div>\n  </div>\n</div>";
+var html = "<div class=\"progress\" ng-if=\"$ctrl.progress\">\n  <div class=\"indeterminate\"></div>\n</div>\n<div class=\"alert success\" ng-if=\"$ctrl.alert\">\n  <span class=\"closebtn\" onclick=\"this.parentElement.style.display='none';\">&times;</span> \n  <strong>Success!</strong> Indicates a successful or positive action.\n</div>\n<div class=\"titlebg\">\n  <h3><span class=\"glyphicon glyphicon-upload\"></span>TRACK FILE UPLOAD</h3>\n</div>\n\n<div>\n  <div class=\"left\">\n    <form method=\"post\" enctype=\"multipart/form-data\" ng-submit=\"$ctrl.onSubmit($event)\">\n      <div class=\"file-field input-field\">\n      <div class=\"btn\">\n        <span>File</span>\n        <input type=\"file\" id=\"fff\" name=\"userfile\" multiple required />\n      </div>\n      <div class=\"file-path-wrapper\">\n        <input class=\"file-path validate\" type=\"text\" placeholder=\"Upload one or more files\">\n      </div>\n      </div>\n      <button class=\"btn waves-effect waves-light\" type=\"submit\" name=\"action\">Upload\n        <i class=\"material-icons right\">send</i>\n      </button>\n    </form>\n  </div>\n  <div class=\"right divider\">\n      <h3 class=\"center-align\">UPLOADED LIST</h3>\n    <div>\n      <table>\n          <thead>\n            <tr>\n              <th></th>\n              <th>Title</th>\n              <th>Artist</th>\n              <th>Album</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr ng-repeat=\"song in $ctrl.fileData\">\n              <td><img ng-src=\"{{song.picture}}\" class=\"circle responsive-img\" ng-style=\"$ctrl.imgObj\"/></td>\n              <td>{{song.title}}</td>\n              <td>{{song.artist}}</td>\n              <td>{{song.album}}</td>\n            </tr>\n          </tbody>\n        </table>\n    </div>\n  </div>\n</div>\n";
 window.angular.module('ng').run(['$templateCache', function(c) { c.put(path, html) }]);
 module.exports = path;
 
 /***/ }),
-/* 121 */
+/* 109 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29067,39 +28715,35 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.root = undefined;
 
-var _angular = __webpack_require__(3);
+var _angular = __webpack_require__(5);
 
 var _angular2 = _interopRequireDefault(_angular);
 
-var _root = __webpack_require__(56);
+__webpack_require__(57);
 
-__webpack_require__(59);
+var _root = __webpack_require__(54);
 
-var _search = __webpack_require__(57);
+var _search = __webpack_require__(55);
 
-var _auth = __webpack_require__(49);
+var _chart = __webpack_require__(50);
 
-var _chart = __webpack_require__(51);
+var _home = __webpack_require__(52);
 
-var _home = __webpack_require__(54);
+var _upload = __webpack_require__(56);
 
-var _upload = __webpack_require__(58);
+var _cart = __webpack_require__(49);
 
-var _cart = __webpack_require__(50);
+var _discover = __webpack_require__(51);
 
-var _discover = __webpack_require__(52);
+var _navbar = __webpack_require__(53);
 
-var _bottom = __webpack_require__(53);
-
-var _navbar = __webpack_require__(55);
-
-var _angularUiRouter = __webpack_require__(6);
+var _angularUiRouter = __webpack_require__(7);
 
 var _angularUiRouter2 = _interopRequireDefault(_angularUiRouter);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var root = exports.root = _angular2.default.module('root', [_search.searchModule, _auth.authModule, _chart.chartModule, _angularUiRouter2.default, _home.homeModule, _upload.uploadModule, _cart.cartModule, _discover.discoverModule, _bottom.bottomModule, _navbar.navbarModule]).component('root', _root.rootComponent).config(function ($stateProvider, $urlRouterProvider) {
+var root = exports.root = _angular2.default.module('root', [_search.searchModule, _chart.chartModule, _angularUiRouter2.default, _home.homeModule, _upload.uploadModule, _cart.cartModule, _discover.discoverModule, _navbar.navbarModule]).component('root', _root.rootComponent).config(function ($stateProvider, $urlRouterProvider) {
   $urlRouterProvider.otherwise('/');
 }).name;
 
