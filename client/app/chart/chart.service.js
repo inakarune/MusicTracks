@@ -9,11 +9,10 @@ export class chartService {
       url: '/chart',
       method: 'GET'
     };
-    return this.$http(params)
-            .then(response => {
-              console.log('chart::::', response.data)
-              return response.data
 
-            });
+    return this.$http(params)
+      .then(response => {
+        return response.data
+      });
   }
 };

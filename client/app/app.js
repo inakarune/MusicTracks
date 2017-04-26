@@ -1,1 +1,0 @@
-angular.module('root', ['searchModule', 'loginModule', 'chartModule', 'rootModule', 'angular-ui-router', 'ngRoute']);

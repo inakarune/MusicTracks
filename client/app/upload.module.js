@@ -4,7 +4,6 @@ import uiRouter from 'angular-ui-router';
 import { uploadService } from './upload.service';
 import './upload.scss';
 
-
 export const uploadModule = angular
   .module('upload', [ uiRouter ])
   .component('upload', uploadComponent)
@@ -20,5 +19,5 @@ export const uploadModule = angular
       });
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
-  })
+  });
   .name;

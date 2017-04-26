@@ -1,7 +1,7 @@
 export class uploadService {
 	constructor($http) {
 		'ngInject';
-		this.$http = $http
+		this.$http = $http;
 	}
 
 	insertSong(files){
@@ -11,31 +11,30 @@ export class uploadService {
 			fileData.append('name', files[obj]);
 		}
 
-    this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
+        this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
 		return this.$http
-						.post('/upload', fileData, {
-            	transformRequest: angular.identity,
-            	headers: {'Content-Type': undefined}
+                .post('/upload', fileData, {
+            	   transformRequest: angular.identity,
+            	   headers: { 'Content-Type': undefined }
         		})
-        		.success(res => {
-            	return res;
-            })
-            .error(() => {
-            
-            });
-
+        		.success(response => {
+            	   return response;
+                })
+                .error(() => {
+                    throw new Error('upload Error');
+                });
 	}
 
-  getUploadedSongList(){
-    this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
-    return this.$http
+    getUploadedSongList(){
+        this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
+        return this.$http
             .get('/getUploadedSongList')
-            .success(res => {
-              return res;
+            .success(response => {
+                return response;
             })
             .error(() => {
-            
+                throw new Error('upload Error');
             });
-  }
+    }
 	
 };

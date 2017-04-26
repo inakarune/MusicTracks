@@ -1,6 +1,6 @@
 var cart = function(req, res){
-  let cart = req.signedCookies.cart;
-  console.log('/cart: ', cart)
+  var cart = req.signedCookies.cart;
+
   if(!cart){
     res.send([]);
   } 
@@ -8,15 +8,14 @@ var cart = function(req, res){
 };
 
 var cart_item = function(req, res){
-    console.log('cart.params', req.query)
-  let title = req.query.title;
+  var title = req.query.title;
   req.query.piece = 1;
-  let cart = req.signedCookies.cart || [];
+  var cart = req.signedCookies.cart || [];
   
   if(!cart.length){
     cart.push(req.query);
   } else {
-    for(let i = 0; i < cart.length; i++){
+    for(var i = 0; i < cart.length; i++){
       if(cart[i].title !== title) {
         cart.push(req.query);
       }
@@ -27,12 +26,12 @@ var cart_item = function(req, res){
   res.redirect('/cart');
 };
 
-var cart_delete = function(req, res){console.log('cart delete::::::', req.query)
-  let title = req.query.title;
-  let cart = req.signedCookies.cart || [];
+var cart_delete = function(req, res){
+  var title = req.query.title;
+  var cart = req.signedCookies.cart || [];
 
   if(cart.length){
-    for(let i = 0; i < cart.length; i++){
+    for(var i = 0; i < cart.length; i++){
       if(cart[i].title === title){
         cart.splice(i, 1);
       }

@@ -4,7 +4,6 @@ import { chartService } from './chart.service';
 import './chart.scss';
 import uiRouter from 'angular-ui-router';
 
-
 export const chartModule = angular
   .module('chart', [ uiRouter ])
   .component('chart', chartComponent)
@@ -17,7 +16,7 @@ export const chartModule = angular
         resolve: {
           chartData: chartService => chartService.getCharts()
         } 
-      })
+      });
    
     $urlRouterProvider.otherwise('/');
   })

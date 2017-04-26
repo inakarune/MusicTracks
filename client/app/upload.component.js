@@ -1,6 +1,5 @@
 import templateUrl from './upload.html';
 
-
 export const uploadComponent = {
 	bindings: {
 		song: '<',
@@ -27,7 +26,7 @@ export const uploadComponent = {
     	}
 
       if(changes.alert){
-        this.alert = angular.copy(this.alert)
+        this.alert = angular.copy(this.alert);
       }
 
       if (changes.uploadData) {
@@ -47,13 +46,14 @@ export const uploadComponent = {
 
     onSubmit(e){
       let files = document.getElementById('fff').files;
-
       this.song = files;
+
     	if(!this.song){
     		return ;
     	}
+
       this.progress = true;
-      this.uploadService.insertSong(this.song)
+      this.uploadService.insertSong(this.song);
         .then(res => {
           if(res.data.message === 'success upload!'){
             this.alert = true;
@@ -61,18 +61,5 @@ export const uploadComponent = {
           }
         });
     }
-
-    // uploadFile(element){
-    //     console.log('element', element.files)
-    // }
-
-
-    // f(){
-    //    var photo = document.getElementById('photo');
-    //    var fol = photo.files[0];
-    //    console.log('fol', fol) 
-    // }
-   
-
   }
 }

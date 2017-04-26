@@ -16,7 +16,7 @@ export const searchModule = angular
       .state('searchSong', {
         url: '/search/:keyword/:condition',
         component: 'search'
-      })
+      });
     $urlRouterProvider.otherwise('/');
   })
   .name

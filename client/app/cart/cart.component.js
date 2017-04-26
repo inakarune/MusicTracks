@@ -18,13 +18,13 @@ export const cartComponent = {
 
     $onChange(changes){
     	if(changes.cartObj){
-    		this.items = Object.assign({}, this.cartObj.data)
+    		this.items = Object.assign({}, this.cartObj.data);
     	}
     }
 
     cb_change(e, title) {
-      var checkbox = e.target;
-      var action = checkbox.checked ? 'add' : 'remove';
+      let checkbox = e.target;
+      let action = checkbox.checked ? 'add' : 'remove';
 
       this.cb_update(action, title);
     }
@@ -45,18 +45,15 @@ export const cartComponent = {
         }  
       }
 
-      
-        this.$http({
-          method: 'DELETE',
-          url: '/cart/' + this.checkbox[0],
-          params: {'title': this.checkbox }
-        });
-      
-      
+      this.$http({
+        method: 'DELETE',
+        url: '/cart/' + this.checkbox[0],
+        params: {'title': this.checkbox }
+      });      
     }
 
     kakaopay(cb){
-		  var IMP = window.IMP;
+		  let IMP = window.IMP;
       this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
       this.$http({
         url: '/getUserInfo',
@@ -76,7 +73,6 @@ export const cartComponent = {
             buyer_postcode : '123-456'
           }, function(rsp) {
             if ( rsp.success ) {
-
                 jQuery.ajax({
                   url: "/payments/complete", //cross-domain error가 발생하지 않도록 동일한 도메인으로 전송
                   type: 'POST',
@@ -110,13 +106,8 @@ export const cartComponent = {
           });
         })
         .error(function(){
-
+          throw new Error('kakaopay error');
         });
-		  
 		};
-
-
-    
-
   }  
 }

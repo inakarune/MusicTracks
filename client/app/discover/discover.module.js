@@ -15,8 +15,9 @@ export const discoverModule = angular
         resolve: {
           serverData: discoverService => discoverService.getAlbums()
         }
-      })
+      });
     
     $urlRouterProvider.otherwise('/');
   })
   .name
+  

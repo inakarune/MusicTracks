@@ -4,7 +4,7 @@ var tokenConfig = require('../config/token');
 
 function createToken (email){
   return jwt.sign({ email: email }, tokenConfig, {
-          expiresIn: 2880
+    expiresIn: 2880
   });
 }
 
@@ -20,6 +20,7 @@ var login = function(req, res){
     if(err){
       return res.status(500).send(err);
     } 
+
     if(!founduser){
       user.save(function(err, userInfo){
         if(err){
@@ -51,6 +52,7 @@ var getUserInfo = function(req, res){
   var authorizationHeader = req.headers['authorization'];
   var token = authorizationHeader.split(' ')[1];
   var userEmail = null;
+
   jwt.verify(token, tokenConfig, function(err, decodedToken){
       if(err){
         return res.sendStatus(403);

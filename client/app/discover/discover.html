@@ -11,8 +11,7 @@
     <div class="text valign-wrapper">
       <a href="#" ng-click="$ctrl.playNg($index)">
         <span class="glyphicon glyphicon-play-circle waves-effect valign"></span>
-      </a>
-      
+      </a>     
     </div>
     <div class="right rb">
       <a class="waves-effect waves-circle waves-light btn-floating secondary-content" ng-click="$ctrl.countGood(song.title)"><span class="glyphicon glyphicon-plus"></span></a>
@@ -26,15 +25,3 @@
   </div>
 </div>
 </div>
-
-<!-- <div ng-repeat="song in $ctrl.albumData">
-<a class="lightbox" href="#{{song.title}}">
-   <img ng-src="data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}"/>
-</a> 
-<div class="lightbox-target" id="{{song.title}}">
-   <img ng-src="data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture)}}"/>
-   <a class="lightbox-close" href="#"></a>
-</div>
-</div> -->
-
-<!-- <img ng-src="data:image/jpg;base64,{{$ctrl.arrayBufferToBase64(song.picture.data.data)}}" alt="Avatar" class="image" style="width:100%"> -->

@@ -11,9 +11,8 @@ export const chartComponent = {
 
     $onChanges(changes) {
       if (changes.chartData) {
-        console.log('chartComponent:::::', this.chartData)
         this.songsData = Object.assign({}, this.chartData);
-        var array = [];
+        let array = [];
         for(let key in this.songsData){
           array.push(this.songsData[key]);
         }

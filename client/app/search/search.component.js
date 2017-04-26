@@ -1,4 +1,5 @@
-import templateUrl from './search.html'
+import templateUrl from './search.html';
+
 export const searchComponent = {
 	bindings: {
 		keyword: '<',
@@ -24,10 +25,6 @@ export const searchComponent = {
     	if(changes.keyword){
     		this.keyword = angular.copy(this.keyword);
     	} 
-      // else if(changes.singleSelect){
-      //       this.singleSelect = angular.copy(this.singleSelect);
-            
-      //   }
     }
 
     onSubmit(){
@@ -35,39 +32,23 @@ export const searchComponent = {
     		return ;
     	}
       
-    	console.log('searchComponent.singleSelect', this.singleSelect)
     	this.searchFile(
     		this.EventEmitter({
     			keyword: this.keyword,
-    			selected: 'title'//this.singleSelect
+    			selected: 'title'
     		})
     	)
         this.search();
-    	// this.getFile()
-
     }
 
     search(){
         this.$state.transitionTo('searchResults', {
             keyword: this.keyword,
-            condition: 'title'//this.singleSelect
+            condition: 'title'
         }, {
             reload: true,
             notify: true
-        })
+        });
     }
-
-
-	// getFile(){
- //        this.searchService.searchSong(this.keyword, this.singleSelect)
- //            .then(response => this.searchs = response)
- //    }
-
-
-
-}
-
-
-
-  
-}
+  }
+};

@@ -1,8 +1,7 @@
 import angular from 'angular';
 import { cartComponent } from './cart.component';
 import uiRouter from 'angular-ui-router';
-import './cart.scss'
-
+import './cart.scss';
 
 export const cartModule = angular
   .module('cart', [ uiRouter ])
@@ -23,7 +22,6 @@ export const cartModule = angular
               }
             })
             .then(function(response){
-              console.log('cartmodule', response)
               return response;
             });
           }
@@ -32,4 +30,4 @@ export const cartModule = angular
    
     $urlRouterProvider.otherwise('/');
   })
-  .name;
+  .name

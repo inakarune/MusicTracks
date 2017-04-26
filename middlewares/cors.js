@@ -1,4 +1,3 @@
-// CORS Headers
 var allowCORS = function (req, res, next) {
 
   var allowedOrigins = [

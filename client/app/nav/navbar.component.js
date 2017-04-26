@@ -18,11 +18,6 @@ export const navbarComponent = {
 
     function onSignIn(googleUser) {
       var profile = googleUser.getBasicProfile();
-
-      console.log('ID: ' + profile.getId());
-      console.log('Name: ' + profile.getName());
-      console.log('Image URL: ' + profile.getImageUrl());
-      console.log('Email: ' + profile.getEmail());
       $scope.onLogin = true;
       $scope.userName = profile.getName();
       $scope.userImg = profile.getImageUrl();
@@ -37,12 +32,11 @@ export const navbarComponent = {
 
       $http(params)
         .success(function(data){
-          console.log('success data', data)
           window.sessionStorage.setItem('accessToken', data.accessToken);
         })
         .error(function(){
-
-        })
+          throw new Error('Token Error');
+        });
    }
 
    function signOut() {
