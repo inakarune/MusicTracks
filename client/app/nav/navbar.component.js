@@ -1,7 +1,7 @@
 import templateUrl from './navbar.html';
 export const navbarComponent = {
   templateUrl,
-  controller: function($scope, $http){
+  controller: function ($scope, $http) {
     $scope.onLogin = false;
     $scope.userName = '';
     $scope.userImg = '';
@@ -16,7 +16,7 @@ export const navbarComponent = {
       "margin-right": "20px"
     };
 
-    function onSignIn(googleUser) {
+    function onSignIn (googleUser) {
       var profile = googleUser.getBasicProfile();
       $scope.onLogin = true;
       $scope.userName = profile.getName();
@@ -31,17 +31,17 @@ export const navbarComponent = {
       };
 
       $http(params)
-        .success(function(data){
+        .success(function (data) {
           window.sessionStorage.setItem('accessToken', data.accessToken);
         })
-        .error(function(){
+        .error(function () {
           throw new Error('Token Error');
         });
    }
 
    function signOut() {
       var auth2 = gapi.auth2.getAuthInstance();
-      auth2.signOut().then(function() {
+      auth2.signOut().then(function () {
         console.log('User signed out.');
         $scope.onLogin = false;
         $scope.userName = '';
