@@ -9,26 +9,26 @@ export const searchComponent = {
   templateUrl,
 
   controller: class searchComponent {
-    constructor(EventEmitter, searchService, $state){
+    constructor (EventEmitter, searchService, $state) {
       'ngInject'
       this.EventEmitter = EventEmitter;
       this.searchService = searchService;
       this.$state = $state;
     }
 
-    $oninit(){
+    $oninit () {
     	this.keyword = '';
     	this.singleSelect = 'title';	
     }
 
-    $onChanges(changes){
-    	if(changes.keyword){
+    $onChanges (changes) {
+    	if (changes.keyword) {
     		this.keyword = angular.copy(this.keyword);
     	} 
     }
 
-    onSubmit(){
-    	if(!this.keyword){
+    onSubmit () {
+    	if (!this.keyword) {
     		return ;
     	}
       
@@ -41,7 +41,7 @@ export const searchComponent = {
         this.search();
     }
 
-    search(){
+    search () {
         this.$state.transitionTo('searchResults', {
             keyword: this.keyword,
             condition: 'title'
