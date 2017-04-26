@@ -1,15 +1,13 @@
 import templateUrl from './upload.html';
 
 export const uploadComponent = {
-	bindings: {
-		song: '<',
-    uploadData: '<',
-	},
-
+    bindings: {
+        song: '<',
+        uploadData: '<',
+    },
   templateUrl,
-
   controller: class uploadComponent {
-    constructor(EventEmitter, uploadService){
+    constructor (EventEmitter, uploadService) {
       'ngInject'
       this.EventEmitter = EventEmitter;
       this.uploadService = uploadService;
@@ -20,12 +18,12 @@ export const uploadComponent = {
       this.progress = false;
     }
 
-    $onChanges(changes){
-    	if(changes.song){
-    		this.song = angular.copy(this.song);
+    $onChanges (changes) {
+    	if (changes.song) {
+    	    this.song = angular.copy(this.song);
     	}
 
-      if(changes.alert){
+      if (changes.alert) {
         this.alert = angular.copy(this.alert);
       }
 
@@ -39,23 +37,23 @@ export const uploadComponent = {
         this.fileData = array;
       }
 
-      if(changes.progress){
+      if (changes.progress) {
         this.progress = angular.copy(this.progress);
       }
     }
 
-    onSubmit(e){
+    onSubmit (e) {
       let files = document.getElementById('fff').files;
       this.song = files;
 
-    	if(!this.song){
-    		return ;
-    	}
+      if (!this.song) {
+          return ;
+      }
 
       this.progress = true;
       this.uploadService.insertSong(this.song)
         .then(res => {
-          if(res.data.message === 'success upload!'){
+          if (res.data.message === 'success upload!') {
             this.alert = true;
             this.progress = false;
           }
