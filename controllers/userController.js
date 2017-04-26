@@ -17,13 +17,13 @@ var login = function (req, res) {
   var query = { email: req.body.email };
 
   User.findOne(query, function (err, founduser) {
-    if(err){
+    if (err) {
       return res.status(500).send(err);
     } 
 
-    if(!founduser){
+    if (!founduser) {
       user.save(function (err, userInfo) {
-        if(err){
+        if (err) {
           res.sendStatus(500);
         }
 
@@ -54,7 +54,7 @@ var getUserInfo = function (req, res) {
   var userEmail = null;
 
   jwt.verify(token, tokenConfig, function (err, decodedToken) {
-      if(err){
+      if (err) {
         return res.sendStatus(403);
       }
     
@@ -62,7 +62,7 @@ var getUserInfo = function (req, res) {
       var query = { email: userEmail };
     
       User.findOne(query, function (err, userInfo) {
-        if(err){
+        if (err) {
           return res.status(500).send(err);
         }
         res.status(200).send(userInfo);
