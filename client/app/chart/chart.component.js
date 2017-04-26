@@ -5,11 +5,11 @@ export const chartComponent = {
   },
   templateUrl,
   controller: class chartComponent {
-    constructor(){
+    constructor () {
       'ngInject'
     }
 
-    $onChanges(changes) {
+    $onChanges (changes) {
       if (changes.chartData) {
         this.songsData = Object.assign({}, this.chartData);
         let array = [];
