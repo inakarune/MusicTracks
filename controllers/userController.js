@@ -57,9 +57,10 @@ var getUserInfo = function(req, res){
       if(err){
         return res.sendStatus(403);
       }
+    
       userEmail = decodedToken.email;
-      console.log(userEmail)
       var query = { email: userEmail };
+    
       User.findOne(query, function(err, userInfo){
         if(err){
           return res.status(500).send(err);
