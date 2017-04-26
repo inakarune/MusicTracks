@@ -1,6 +1,9 @@
 import templateUrl from './searchResult.html';
 
 export const searchResultComponent = {
+  bindings: {
+    searchSong: '&'
+  },
   templateUrl,
   controller: ['searchService', resultCtrl]
 };
