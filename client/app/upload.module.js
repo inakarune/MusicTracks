@@ -19,5 +19,5 @@ export const uploadModule = angular
       });
     $locationProvider.html5Mode(true);
     $urlRouterProvider.otherwise('/');
-  });
+  })
   .name;
