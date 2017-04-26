@@ -1,10 +1,10 @@
 export class chartService {
-  constructor($http) {
+  constructor ($http) {
     'ngInject';
     this.$http = $http;
   }
 
-  getCharts() {
+  getCharts () {
     let params = {
       url: '/chart',
       method: 'GET'
