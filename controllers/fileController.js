@@ -30,7 +30,7 @@ var uploadFile = function (req, res) {
   var token = authorizationHeader.split(' ')[1];
   var userEmail = null;
   jwt.verify(token, tokenConfig, function (err, decodedToken) {
-      if(err){
+      if (err) {
         return res.sendStatus(403);
       }
       userEmail = decodedToken.email;
@@ -47,11 +47,11 @@ var uploadFile = function (req, res) {
       };
 
       Song.findOne({ filename: file.name }, function (err, song) {
-        if(err){
+        if (err) {
           return res.status(500).send(err);
         }
 
-        if(song){
+        if (song) {
           return res.end(JSON.stringify({message: 'success upload!'}));   
         }
       });
@@ -59,7 +59,7 @@ var uploadFile = function (req, res) {
       s3.upload(params, function (err, data) {
         var readableStream = fs.createReadStream(file.path);
         var parser = mm(readableStream, function (err, metadata) {
-          if(err) return res.json(err);
+          if (err) return res.json(err);
 
           var imgName = metadata.title + '.' + metadata.picture[0].format;
           var imgParams = {
@@ -82,7 +82,7 @@ var uploadFile = function (req, res) {
 
             song.save(function (err, songInfo) {
               ++count;
-              if(count === files.userfile.length){
+              if (count === files.userfile.length) {
                 return res.end(JSON.stringify({message: 'success upload!'}));
               }
             });
@@ -101,11 +101,11 @@ var searchFile = function (req, res) {
   var condition = req.query.condition;
   var query = {};
 
-  if(condition === 'title'){
+  if (condition === 'title') {
     query['title'] = { $regex : keyword, $options: 'ix' }
-  } else if(condition === 'album') {
+  } else if (condition === 'album') {
     query['album'] = { $regex : keyword, $options: 'ix' }
-  } else if(condition === 'artist') {
+  } else if (condition === 'artist') {
     query['artist'] = { $regex : keyword, $options: 'ix' }
   }
 
@@ -120,7 +120,7 @@ var searchFile = function (req, res) {
 
 var discoverFile = function (req, res) {
   Song.find({}, function (err, data) {
-    if(err) throw err;
+    if (err) throw err;
     res.status(200).send(data);
   });
 };
@@ -136,13 +136,13 @@ var getUploadedFileList = function (req, res) {
   var token = authorizationHeader.split(' ')[1];
   var userEmail = null;
   jwt.verify(token, tokenConfig, function (err, decodedToken) {
-      if(err){
+      if (err) {
         return res.sendStatus(403);
       }
       userEmail = decodedToken.email;
       
       Song.find({ user: userEmail }, function (err, data) {
-        if(err) throw err;
+        if (err) throw err;
         res.status(200).send(data);
       });
   });
