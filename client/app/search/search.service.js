@@ -1,5 +1,5 @@
 export class searchService {
-	constructor($http) {
+	constructor ($http) {
 		'ngInject';
 		this.$http = $http;
 	}
