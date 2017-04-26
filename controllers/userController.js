@@ -2,13 +2,13 @@ var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var tokenConfig = require('../config/token');
 
-function createToken (email){
+function createToken (email) {
   return jwt.sign({ email: email }, tokenConfig, {
     expiresIn: 2880
   });
 }
 
-var login = function(req, res){
+var login = function (req, res) {
   var accessToken = null;
   var user = new User({
     name: req.body.name,
@@ -16,13 +16,13 @@ var login = function(req, res){
   });
   var query = { email: req.body.email };
 
-  User.findOne(query, function(err, founduser){
+  User.findOne(query, function (err, founduser) {
     if(err){
       return res.status(500).send(err);
     } 
 
     if(!founduser){
-      user.save(function(err, userInfo){
+      user.save(function (err, userInfo) {
         if(err){
           res.sendStatus(500);
         }
@@ -43,17 +43,17 @@ var login = function(req, res){
   });
 };
 
-var logout = function(req, res){
+var logout = function (req, res) {
   req.logout();
   res.redirect('/');
 };
 
-var getUserInfo = function(req, res){
+var getUserInfo = function (req, res) {
   var authorizationHeader = req.headers['authorization'];
   var token = authorizationHeader.split(' ')[1];
   var userEmail = null;
 
-  jwt.verify(token, tokenConfig, function(err, decodedToken){
+  jwt.verify(token, tokenConfig, function (err, decodedToken) {
       if(err){
         return res.sendStatus(403);
       }
@@ -61,7 +61,7 @@ var getUserInfo = function(req, res){
       userEmail = decodedToken.email;
       var query = { email: userEmail };
     
-      User.findOne(query, function(err, userInfo){
+      User.findOne(query, function (err, userInfo) {
         if(err){
           return res.status(500).send(err);
         }
