@@ -5,31 +5,31 @@ export const cartComponent = {
 	},
   templateUrl,
   controller: class cartComponent {
-    constructor($http){
+    constructor ($http) {
       'ngInject'
       this.total = 0;
       this.checkbox = [];
       this.$http = $http;
     }
 
-    $oninit(){
+    $oninit () {
     	this.items = this.cartObj.data;
     }
 
-    $onChange(changes){
+    $onChange (changes) {
     	if(changes.cartObj){
     		this.items = Object.assign({}, this.cartObj.data);
     	}
     }
 
-    cb_change(e, title) {
+    cb_change (e, title) {
       let checkbox = e.target;
       let action = checkbox.checked ? 'add' : 'remove';
 
       this.cb_update(action, title);
     }
 
-    cb_update(action, title) {
+    cb_update (action, title) {
       if (action === 'add' && this.checkbox.indexOf(title) === -1) {
         this.checkbox.push(title);
       }
@@ -38,9 +38,9 @@ export const cartComponent = {
       }
     }
 
-    cb_delete(){
+    cb_delete () {
       for(let i = 0; i < this.cartObj.data.length; i++){
-        if(this.checkbox[0] === this.cartObj.data[i].title){
+        if (this.checkbox[0] === this.cartObj.data[i].title) {
           this.cartObj.data.splice(i, 1);
         }  
       }
@@ -52,7 +52,7 @@ export const cartComponent = {
       });      
     }
 
-    kakaopay(cb){
+    kakaopay (cb) {
 		  let IMP = window.IMP;
       this.$http.defaults.headers.common['Authorization'] = 'Bearer ' + window.sessionStorage.getItem('accessToken');
       this.$http({
