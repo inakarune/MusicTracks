@@ -5,7 +5,7 @@ export const searchResultComponent = {
     searchSong: '&'
   },
   templateUrl,
-  controller: ['searchService', resultCtrl]
+  controller: resultCtrl
 };
 
 function resultCtrl($scope, $stateParams, searchService, $http){ 
