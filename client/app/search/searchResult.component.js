@@ -3,7 +3,7 @@ import templateUrl from './searchResult.html';
 export const searchResultComponent = {
   templateUrl,
   controller: class SearchResultComponent {
-    constructor(searchService, $stateParams, $http){
+    constructor (searchService, $stateParams, $http) {
       this.$http = $http;
       this.searchService = searchService;
       this.$stateParams = $stateParams;
@@ -18,14 +18,14 @@ export const searchResultComponent = {
       };
     }
 
-    playNg(index){
+    playNg (index) {
       let idx = index.toString();
       let audio = document.getElementById(idx);
       audio.load();
       audio.play();
     }
 
-    sendCart(title, artist, album, price){
+    sendCart (title, artist, album, price) {
       return this.$http({
         method: 'GET',
         url: '/cart/:item',
