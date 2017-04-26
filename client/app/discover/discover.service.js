@@ -1,10 +1,10 @@
 export class discoverService {
-  constructor($http) {
+  constructor ($http) {
     'ngInject';
     this.$http = $http;
   }
 
-  getAlbums() {
+  getAlbums () {
     let param = {
       url: '/discover',
       method: 'GET',
